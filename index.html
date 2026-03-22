@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Coding Workshop — Build Real Apps by Feel</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --border: #222222;
+      --text: #e8e8e8;
+      --muted: #888888;
+      --accent: #7c3aed;
+      --accent-light: #a78bfa;
+      --green: #10b981;
+      --font: 'Inter', system-ui, sans-serif;
+      --mono: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    a { color: var(--accent-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .nav-logo { font-weight: 700; font-size: 1rem; color: var(--text); }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* HERO */
+    .hero {
+      padding: 7rem 2rem 5rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.3);
+      color: var(--accent-light);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #6d28d9; text-decoration: none; }
+    .cohort-note { color: var(--muted); font-size: 0.85rem; }
+
+    /* TERMINAL */
+    .terminal-wrap {
+      max-width: 760px;
+      margin: 3rem auto 0;
+      padding: 0 2rem;
+    }
+    .terminal {
+      background: #0d0d0d;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      font-family: var(--mono);
+      font-size: 0.88rem;
+    }
+    .terminal-bar {
+      background: #1a1a1a;
+      padding: 0.6rem 1rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-red { background: #ff5f57; }
+    .dot-yellow { background: #febc2e; }
+    .dot-green { background: #28c840; }
+    .terminal-body { padding: 1.5rem; line-height: 2; }
+    .t-prompt { color: var(--accent-light); }
+    .t-cmd { color: var(--text); }
+    .t-out { color: var(--green); }
+
+    /* SECTION */
+    section { padding: 5rem 2rem; max-width: 760px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .section-sub { color: var(--muted); font-size: 1rem; margin-bottom: 3rem; max-width: 540px; }
+
+    /* PROJECTS GRID */
+    .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .project-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+    .project-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .project-card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.75rem; }
+    .project-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-family: var(--mono);
+      color: var(--accent-light);
+      background: rgba(124,58,237,0.1);
+      border: 1px solid rgba(124,58,237,0.2);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    /* PHASES */
+    .phases { display: flex; flex-direction: column; gap: 0; }
+    .phase {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .phase:last-child { border-bottom: none; }
+    .phase-time { font-size: 0.82rem; font-weight: 700; color: var(--accent-light); padding-top: 0.2rem; }
+    .phase h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .phase p { font-size: 0.9rem; color: var(--muted); }
+
+    /* FOR WHO */
+    .for-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 600px) { .for-grid { grid-template-columns: 1fr; } }
+    .for-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .for-card h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .for-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .for-card li { font-size: 0.9rem; color: var(--text); padding-left: 1.2rem; position: relative; }
+    .for-card li::before { content: '→'; position: absolute; left: 0; color: var(--accent-light); }
+    .for-card.no li::before { content: '✕'; color: var(--muted); }
+
+    /* INSTRUCTOR */
+    .instructor-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+    .instructor-name { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.25rem; }
+    .instructor-title { font-size: 0.85rem; color: var(--accent-light); margin-bottom: 1.25rem; }
+    .instructor-bio { font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .faq-a { font-size: 0.9rem; color: var(--muted); }
+
+    /* WAITLIST */
+    .waitlist-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .waitlist-section h2 { margin-bottom: 0.75rem; }
+    .waitlist-section p { color: var(--muted); margin-bottom: 2rem; font-size: 0.95rem; }
+    .waitlist-form { display: flex; gap: 0.75rem; max-width: 400px; margin: 0 auto; }
+    .waitlist-form input {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-family: var(--font);
+      outline: none;
+    }
+    .waitlist-form input:focus { border-color: var(--accent); }
+    .waitlist-note { margin-top: 0.75rem; font-size: 0.78rem; color: var(--muted); }
+
+    /* DIVIDER */
+    .divider { border: none; border-top: 1px solid var(--border); max-width: 760px; margin: 0 auto; }
+
+    /* FOOTER */
+    footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">Vibe Coding</span>
+  <div class="nav-links">
+    <a href="#build">What You Build</a>
+    <a href="#how">How It Works</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">Hands-on Workshop</div>
+  <h1>Build apps<br/>by feel.</h1>
+  <p class="hero-sub">A one-day workshop where you go from idea to working application using AI as your co-pilot. No syntax memorization. No boilerplate. Just you and the vibe.</p>
+  <div class="cta-row">
+    <a href="#waitlist" class="btn-primary">Join the Waitlist →</a>
+    <span class="cohort-note">Summer 2026 · Limited to 20 seats</span>
+  </div>
+</div>
+
+<!-- TERMINAL -->
+<div class="terminal-wrap">
+  <div class="terminal">
+    <div class="terminal-bar">
+      <div class="dot dot-red"></div>
+      <div class="dot dot-yellow"></div>
+      <div class="dot dot-green"></div>
+    </div>
+    <div class="terminal-body">
+      <div><span class="t-prompt">~ $</span> <span class="t-cmd">build me a mood tracker with weekly charts</span></div>
+      <div class="t-out">&gt; Scaffolding React app...</div>
+      <div class="t-out">&gt; Adding chart library...</div>
+      <div class="t-out">&gt; Generating mood entry form...</div>
+      <div class="t-out">&gt; Weekly view with color-coded bars... done.</div>
+      <br/>
+      <div><span class="t-prompt">~ $</span> <span class="t-cmd">make the sad days softer blue, not angry red</span></div>
+      <div class="t-out">&gt; Updating palette... deployed.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider" style="margin-top:4rem;" />
+
+<!-- WHAT YOU BUILD -->
+<section id="build">
+  <div class="section-label">What You Build</div>
+  <h2>Four projects. One day.</h2>
+  <p class="section-sub">Each project teaches a new layer of the vibe coding workflow — progressively. You ship all four before you leave.</p>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-num">01</div>
+      <h3>Personal Landing Page</h3>
+      <p>Start simple. Describe your ideal portfolio page and watch it materialize. Learn how prompting style affects output — and how to iterate fast.</p>
+      <span class="project-tag">prompt → output → refine</span>
+    </div>
+    <div class="project-card">
+      <div class="project-num">02</div>
+      <h3>Mood Tracker with Charts</h3>
+      <p>Your first interactive app. Add state, user input, and data visualization — all through conversation. This is where the vibe clicks.</p>
+      <span class="project-tag">state + data viz</span>
+    </div>
+    <div class="project-card">
+      <div class="project-num">03</div>
+      <h3>Recipe Finder with API</h3>
+      <p>Connect to the outside world. Pull real data from a public API, handle loading and error states, and build something you'd actually use.</p>
+      <span class="project-tag">APIs + error handling</span>
+    </div>
+    <div class="project-card">
+      <div class="project-num">04</div>
+      <h3>AI Chat Assistant</h3>
+      <p>The capstone. Build a conversational AI interface with streaming responses, message history, and a personality you define. Ship it to a real URL.</p>
+      <span class="project-tag">AI integration + deploy</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-label">How It Works</div>
+  <h2>Four phases. One day.</h2>
+  <p class="section-sub">Each phase builds on the last. You're not watching — you're building from minute one.</p>
+
+  <div class="phases">
+    <div class="phase">
+      <div class="phase-time">Morning</div>
+      <div>
+        <h3>Learn the Scales</h3>
+        <p>You learn how AI coding tools actually work — what they're good at, where they hallucinate, and how to prompt for structure, not just output. Think of this as learning chord shapes before you improvise.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-time">Late Morning</div>
+      <div>
+        <h3>Build Your First Two</h3>
+        <p>Projects 01 and 02. Guided but hands-on. You'll make mistakes, and that's the point — learning to debug with AI is a skill unto itself.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-time">Afternoon</div>
+      <div>
+        <h3>Go Off-Script</h3>
+        <p>Projects 03 and 04 give you more freedom. The prompts are yours. The architecture is yours. You start to feel the vibe — that moment when you and the AI are riffing together.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-time">End of Day</div>
+      <div>
+        <h3>Ship It</h3>
+        <p>Every project gets deployed to a real URL. You leave with a portfolio of four working apps and the muscle memory to build more on your own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- INSTRUCTOR -->
+<section id="instructor">
+  <div class="section-label">Your Instructor</div>
+  <h2>Someone who actually gets it.</h2>
+  <p class="section-sub">Not a CS grad. Not a bootcamp graduate. Someone who learned to build the hard way — and figured out how to teach it.</p>
+
+  <div class="instructor-card">
+    <div class="instructor-name">Kyle Rosebrook</div>
+    <div class="instructor-title">Staff Engineer · AppSec & AI · Self-Taught</div>
+    <p class="instructor-bio">
+      I didn't come up through a computer science program. I came up through bartending, quality control, and teaching myself to code while rebuilding my life from scratch. Today I'm a Staff Engineer in AppSec and AI, teaching senior engineers at a managed services firm — with 240+ AI tools configured and running.<br/><br/>
+      I know what it feels like to stare at a tool this powerful and think <em>I have no idea where to start.</em> That's exactly who this workshop is built for. You don't need a CS degree. You don't need to know what a React component is. You need someone who will sit with you until it clicks — and won't make you feel stupid for asking the question a second time.
+    </p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- FOR WHO -->
+<section id="who">
+  <div class="section-label">Who This Is For</div>
+  <h2>Be honest with yourself.</h2>
+  <p class="section-sub">This workshop was built for a specific kind of person. Check which column you're in.</p>
+
+  <div class="for-grid">
+    <div class="for-card">
+      <h3>Yes, this is for you if…</h3>
+      <ul>
+        <li>You've been curious about building software but bootcamps feel like overkill</li>
+        <li>You're a designer, marketer, or founder who wants to prototype without waiting for a developer</li>
+        <li>You've tried ChatGPT for code but ended up in copy-paste hell</li>
+        <li>You want to ship something real — not a tutorial, your thing</li>
+      </ul>
+    </div>
+    <div class="for-card no">
+      <h3>Maybe not if…</h3>
+      <ul>
+        <li>You're an experienced developer looking for advanced AI/ML techniques</li>
+        <li>You want to deeply learn a specific programming language</li>
+        <li>You're looking for a lecture — this is 90% hands-on building</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- WHAT TO BRING -->
+<section>
+  <div class="section-label">What to Bring</div>
+  <h2>Almost nothing.</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;">
+    <div>
+      <p style="font-weight:700;margin-bottom:0.75rem;">You bring:</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="color:var(--muted);font-size:0.9rem;">→ A laptop with Chrome or Firefox</li>
+        <li style="color:var(--muted);font-size:0.9rem;">→ A free GitHub account</li>
+        <li style="color:var(--muted);font-size:0.9rem;">→ An idea (even a vague one)</li>
+        <li style="color:var(--muted);font-size:0.9rem;">→ Willingness to experiment</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-weight:700;margin-bottom:0.75rem;">We provide:</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+        <li style="color:var(--muted);font-size:0.9rem;">→ All AI tool access for the day</li>
+        <li style="color:var(--muted);font-size:0.9rem;">→ The prompting playbook</li>
+        <li style="color:var(--muted);font-size:0.9rem;">→ Your GitHub repo with all code</li>
+        <li style="color:var(--muted);font-size:0.9rem;">→ Four deployed apps at real URLs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label">FAQ</div>
+  <h2>Common questions.</h2>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">Do I need to know how to code?</div>
+      <div class="faq-a">No. If you can write an email, you can vibe code. The AI handles syntax — you handle intent. We teach you the prompting patterns that make it work.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What will I actually walk away with?</div>
+      <div class="faq-a">A deployed, working web app on a real URL you can share. Plus the prompting playbook, a GitHub repo with your code, and the confidence to build your next idea solo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Which AI tools do we use?</div>
+      <div class="faq-a">Primarily Claude and Cursor. We also touch on v0, Vercel, and Supabase for deployment and backend. All tools have free tiers sufficient for the workshop.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if I get stuck during the build?</div>
+      <div class="faq-a">That is literally the point. Getting stuck and unstuck with AI is the core skill. Instructors float the room the entire day. Nobody gets left behind.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is this a lecture or hands-on?</div>
+      <div class="faq-a">90% hands-on. Short concept intros (10–15 min), then you build. Think cooking class, not cookbook reading.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Where is the workshop held?</div>
+      <div class="faq-a">Chicago area — College of Lake County, Grayslake, IL. In-person only for the first cohort. Remote format coming later.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- WAITLIST -->
+<section id="waitlist" style="padding:5rem 2rem;">
+  <div class="waitlist-section">
+    <h2>One day. One idea.<br/>One deployed app.</h2>
+    <p>Summer 2026 · Limited to 20 seats · Beginners welcome</p>
+    <div class="waitlist-form">
+      <input type="email" placeholder="your@email.com" />
+      <a href="mailto:hello@vibecodingworkshop.com" class="btn-primary">Join Waitlist</a>
+    </div>
+    <div class="waitlist-note">No spam. Just launch dates and early-bird pricing.</div>
+  </div>
+</section>
+
+<footer>
+  <span>Vibe Coding Workshop · Built for beginners, by builders.</span>
+  <a href="mailto:hello@vibecodingworkshop.com">hello@vibecodingworkshop.com</a>
+</footer>
+
+</body>
+</html>
