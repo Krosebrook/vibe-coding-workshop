@@ -286,4 +286,274 @@
 
 ---
 
+---
+
+## Phase 4 Schemas
+
+### PromptLibraryEntry
+
+Used by the Prompt Library web app (`docs/phase-4/tools/prompt-library.md`).
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PromptLibraryEntry",
+  "description": "A single prompt in the Vibe Coding Prompt Library",
+  "type": "object",
+  "required": ["id", "title", "description", "prompt", "tags", "category", "aiTools", "skillLevel"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]+-[0-9]{3}$",
+      "description": "Unique prompt ID (e.g., 'debug-001')",
+      "example": "debug-001"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "Short human-readable title"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "One or two sentence description of what the prompt does"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "The prompt body. Use {{VARIABLE_NAME}} for replaceable variables."
+    },
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "example": { "type": "string" }
+        }
+      },
+      "description": "Variables in the prompt that users replace"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Searchable tags"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "debugging", "scaffolding", "ui-generation", "api-integration",
+        "accessibility", "seo", "deployment", "refactoring",
+        "documentation", "prompting", "security", "performance"
+      ]
+    },
+    "aiTools": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["claude", "cursor", "chatgpt", "gemini", "copilot", "windsurf", "v0", "all"]
+      },
+      "description": "Which AI tools this prompt works well with"
+    },
+    "skillLevel": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"]
+    },
+    "workshopProject": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["01", "02", "03", "04"]
+      },
+      "description": "Which workshop projects this prompt applies to"
+    },
+    "exampleOutput": {
+      "type": "string",
+      "description": "Sample of what a good AI response looks like"
+    },
+    "author": {
+      "type": "string",
+      "description": "GitHub username or full name"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semver version"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}
+```
+
+**Example:**
+```json
+{
+  "id": "debug-001",
+  "title": "Error-First Debugging",
+  "description": "Give AI an error and your code to get a specific, actionable fix.",
+  "prompt": "I got this error:\n\n```\n{{ERROR_MESSAGE}}\n```\n\nHere is the code:\n\n```{{LANGUAGE}}\n{{CODE_BLOCK}}\n```\n\nExplain what caused this in plain English, then give me the corrected code.",
+  "variables": [
+    { "name": "ERROR_MESSAGE", "description": "Exact error message" },
+    { "name": "LANGUAGE", "description": "js, html, css, python, etc." },
+    { "name": "CODE_BLOCK", "description": "Code that produced the error" }
+  ],
+  "tags": ["debugging", "beginner", "error-handling"],
+  "category": "debugging",
+  "aiTools": ["claude", "cursor", "chatgpt"],
+  "skillLevel": "beginner",
+  "workshopProject": ["01", "02", "03", "04"],
+  "author": "Krosebrook",
+  "version": "1.0.0",
+  "createdAt": "2026-03-01",
+  "updatedAt": "2026-03-01"
+}
+```
+
+---
+
+### SponsorPackage
+
+Used by the sponsorship management workflow (`docs/phase-4/revenue/sponsorship-packages.md`).
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SponsorPackage",
+  "description": "A sponsorship agreement with an AI/dev tool company",
+  "type": "object",
+  "required": ["id", "companyName", "tier", "cohort", "status", "agreedAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "companyName": { "type": "string" },
+    "contactEmail": { "type": "string", "format": "email" },
+    "tier": {
+      "type": "string",
+      "enum": ["bronze", "silver", "gold", "title"]
+    },
+    "cohort": {
+      "type": "string",
+      "description": "Cohort ID or 'all-YYYY' for annual title sponsors"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Agreed sponsorship amount in USD"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["prospecting", "negotiating", "agreed", "paid", "delivered", "complete", "declined"]
+    },
+    "benefits": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of agreed benefit deliverables"
+    },
+    "agreedAt": { "type": "string", "format": "date" },
+    "paymentReceivedAt": { "type": "string", "format": "date" },
+    "notes": { "type": "string" }
+  }
+}
+```
+
+---
+
+### CurriculumLicensee
+
+Used to track organizations that have licensed the workshop curriculum (`docs/phase-4/revenue/curriculum-licensing.md`).
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CurriculumLicensee",
+  "description": "An organization licensed to teach the Vibe Coding Workshop curriculum",
+  "type": "object",
+  "required": ["id", "organizationName", "contactEmail", "tier", "licenseStart", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "organizationName": { "type": "string" },
+    "organizationType": {
+      "type": "string",
+      "enum": ["bootcamp", "community-college", "university", "corporate", "non-profit", "maker-space", "other"]
+    },
+    "contactEmail": { "type": "string", "format": "email" },
+    "city": { "type": "string" },
+    "country": { "type": "string" },
+    "tier": {
+      "type": "string",
+      "enum": ["starter", "growth", "enterprise", "non-profit"]
+    },
+    "annualFee": { "type": "number" },
+    "licenseStart": { "type": "string", "format": "date" },
+    "licenseEnd": { "type": "string", "format": "date" },
+    "status": {
+      "type": "string",
+      "enum": ["prospect", "pilot", "active", "expired", "terminated"]
+    },
+    "cohortsDelivered": { "type": "integer", "minimum": 0 },
+    "totalParticipants": { "type": "integer", "minimum": 0 },
+    "averageNps": { "type": "number", "minimum": -100, "maximum": 100 },
+    "notes": { "type": "string" }
+  }
+}
+```
+
+---
+
+### CodeJamSubmission
+
+Used for the annual Vibe Code Jam event (`docs/phase-4/community/code-jam.md`).
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CodeJamSubmission",
+  "description": "A project submission for the annual Vibe Code Jam",
+  "type": "object",
+  "required": ["id", "projectName", "liveUrl", "track", "submittedAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "year": { "type": "integer" },
+    "projectName": { "type": "string", "maxLength": 80 },
+    "description": { "type": "string", "maxLength": 280 },
+    "liveUrl": { "type": "string", "format": "uri" },
+    "githubUrl": { "type": "string", "format": "uri" },
+    "track": {
+      "type": "string",
+      "enum": ["solo", "team", "first-timer", "remix"]
+    },
+    "teamMembers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 3
+    },
+    "aiToolsUsed": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "wouldYouUseThis": { "type": "boolean" },
+    "submittedAt": { "type": "string", "format": "date-time" },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "ships": { "type": "number", "minimum": 0, "maximum": 5 },
+        "solvessomething": { "type": "number", "minimum": 0, "maximum": 5 },
+        "vibe": { "type": "number", "minimum": 0, "maximum": 5 },
+        "aiFirstApproach": { "type": "number", "minimum": 0, "maximum": 5 },
+        "accessible": { "type": "number", "minimum": 0, "maximum": 5 }
+      }
+    }
+  }
+}
+```
+
+---
+
 *These schemas serve as contracts between UI, backend, and AI tooling. Update when data structures change.*

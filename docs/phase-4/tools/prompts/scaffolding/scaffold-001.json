@@ -1,0 +1,48 @@
+{
+  "id": "scaffold-001",
+  "title": "Describe-First Project Starter",
+  "description": "Start a new project by describing the experience you want to create — before asking for any code.",
+  "prompt": "I want to build {{PROJECT_DESCRIPTION}}.\n\nHere is what it should do:\n- {{FEATURE_1}}\n- {{FEATURE_2}}\n- {{FEATURE_3}}\n\nThe user experience I want: {{UX_DESCRIPTION}}\n\nTech constraints:\n- Vanilla HTML, CSS, and JavaScript only (no frameworks)\n- No external libraries unless absolutely necessary\n- Mobile-friendly\n- {{STYLE_DESCRIPTION}}\n\nStart by creating a single index.html file with the full structure, styles, and functionality. Add comments explaining what each section does.",
+  "variables": [
+    {
+      "name": "PROJECT_DESCRIPTION",
+      "description": "Describe what you're building in one sentence",
+      "example": "a personal portfolio page that shows my name, three projects, and my contact info"
+    },
+    {
+      "name": "FEATURE_1",
+      "description": "First key feature",
+      "example": "A hero section with my name and a short tagline"
+    },
+    {
+      "name": "FEATURE_2",
+      "description": "Second key feature",
+      "example": "A grid of project cards with title, description, and a link"
+    },
+    {
+      "name": "FEATURE_3",
+      "description": "Third key feature",
+      "example": "A contact section with my email address"
+    },
+    {
+      "name": "UX_DESCRIPTION",
+      "description": "Describe how it should feel to use",
+      "example": "Clean and professional. Like a design portfolio, not a resume."
+    },
+    {
+      "name": "STYLE_DESCRIPTION",
+      "description": "Any visual style preferences",
+      "example": "Dark background with purple accent color"
+    }
+  ],
+  "tags": ["scaffolding", "beginner", "project-starter", "describe-first"],
+  "category": "scaffolding",
+  "aiTools": ["claude", "cursor", "chatgpt"],
+  "skillLevel": "beginner",
+  "workshopProject": ["01"],
+  "exampleOutput": "Here is your index.html with all three sections...",
+  "author": "Krosebrook",
+  "version": "1.0.0",
+  "createdAt": "2026-03-01",
+  "updatedAt": "2026-03-01"
+}

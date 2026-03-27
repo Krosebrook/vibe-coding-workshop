@@ -227,6 +227,31 @@
     .faq-q { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
     .faq-a { font-size: 0.9rem; color: var(--muted); }
 
+    /* ECOSYSTEM */
+    .ecosystem-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+    @media (max-width: 700px) { .ecosystem-grid { grid-template-columns: 1fr; } }
+    @media (min-width: 701px) and (max-width: 900px) { .ecosystem-grid { grid-template-columns: 1fr 1fr; } }
+    .ecosystem-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .ecosystem-icon { font-size: 1.4rem; margin-bottom: 0.75rem; }
+    .ecosystem-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .ecosystem-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+    .ecosystem-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-family: var(--mono);
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      margin-top: 0.75rem;
+    }
+
     /* WAITLIST */
     .waitlist-section {
       background: var(--surface);
@@ -277,6 +302,7 @@
   <div class="nav-links">
     <a href="#build">What You Build</a>
     <a href="#how">How It Works</a>
+    <a href="#ecosystem">Ecosystem</a>
     <a href="#faq">FAQ</a>
   </div>
 </nav>
@@ -501,7 +527,53 @@
 
 <hr class="divider" />
 
-<!-- WAITLIST -->
+<!-- ECOSYSTEM -->
+<section id="ecosystem">
+  <div class="section-label">What's Coming</div>
+  <h2>Beyond the workshop.</h2>
+  <p class="section-sub">The workshop is the start. The ecosystem is where it scales — tools, community, and resources for every stage of the vibe coding journey.</p>
+
+  <div class="ecosystem-grid">
+    <div class="ecosystem-card">
+      <div class="ecosystem-icon">🛠️</div>
+      <h3>Vibe Starter</h3>
+      <p>An opinionated CLI that scaffolds a new project in seconds. Cursor-ready, Claude-ready, Vercel-ready.</p>
+      <span class="ecosystem-tag">npx vibe-starter</span>
+    </div>
+    <div class="ecosystem-card">
+      <div class="ecosystem-icon">📚</div>
+      <h3>Prompt Library</h3>
+      <p>A searchable, tagged library of battle-tested prompts for building with AI. Browse, copy, contribute.</p>
+      <span class="ecosystem-tag">prompts.vibecodingworkshop.com</span>
+    </div>
+    <div class="ecosystem-card">
+      <div class="ecosystem-icon">⚖️</div>
+      <h3>AI Tool Comparison</h3>
+      <p>An honest, monthly-updated guide to the AI dev tools that matter — ranked for vibe coders.</p>
+      <span class="ecosystem-tag">Updated monthly</span>
+    </div>
+    <div class="ecosystem-card">
+      <div class="ecosystem-icon">🏆</div>
+      <h3>Vibe Code Jam</h3>
+      <p>An annual 24-hour online build event. Anyone can enter. Ship before the clock runs out.</p>
+      <span class="ecosystem-tag">Coming 2027</span>
+    </div>
+    <div class="ecosystem-card">
+      <div class="ecosystem-icon">🌍</div>
+      <h3>Regional Workshops</h3>
+      <p>The same workshop, in your city. Taught by certified local instructors who've been through it themselves.</p>
+      <span class="ecosystem-tag">3 cities by end of 2027</span>
+    </div>
+    <div class="ecosystem-card">
+      <div class="ecosystem-icon">📖</div>
+      <h3>The Book</h3>
+      <p><em>Vibe Coding: Build Anything with AI</em> — the definitive guide for anyone who wants to build without learning to code.</p>
+      <span class="ecosystem-tag">In development</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
 <section id="waitlist" style="padding:5rem 2rem;">
   <div class="waitlist-section">
     <h2>One day. One idea.<br/>One deployed app.</h2>

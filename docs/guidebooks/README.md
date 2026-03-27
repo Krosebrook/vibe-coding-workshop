@@ -33,6 +33,11 @@
 | G23 | [Participant Pre-Workshop Guide](#g23---participant-pre-workshop-guide) | Participants | 10 |
 | G24 | [Post-Workshop: Keep Building](#g24---post-workshop-keep-building) | Alumni | 20 |
 | G25 | [Business Case for AI-Assisted Development](#g25---business-case-for-ai-assisted-development) | Managers/Founders | 15 |
+| G26 | [Getting Started with Vibe Starter](#g26---getting-started-with-vibe-starter) | All learners | 10 |
+| G27 | [How to Use the Prompt Library](#g27---how-to-use-the-prompt-library) | All learners | 10 |
+| G28 | [AI Tool Comparison: Choosing Your Stack](#g28---ai-tool-comparison-choosing-your-stack) | All learners | 15 |
+| G29 | [Hosting a Regional Vibe Coding Workshop](#g29---hosting-a-regional-vibe-coding-workshop) | Instructors | 20 |
+| G30 | [The Vibe Code Jam: Participant Guide](#g30---the-vibe-code-jam-participant-guide) | Community | 10 |
 
 ---
 
@@ -625,6 +630,121 @@ git checkout -b feature     # Create a new branch
 8. Getting Stakeholder Buy-In
 9. Training Your Team
 10. Governance and Security Policies for AI Dev Tools
+
+---
+
+## G26 — Getting Started with Vibe Starter
+
+**Audience:** All learners  
+**Summary:** How to use the Vibe Starter CLI to scaffold new projects in seconds and hit the ground building.
+
+### Table of Contents
+1. What Is Vibe Starter?
+2. Installing and Running (npx, no install needed)
+3. Choosing the Right Template
+4. Understanding the Generated Files
+5. Customizing Your `.cursorrules`
+6. Customizing Your `CLAUDE.md`
+7. Deploying Immediately After Scaffolding
+8. Advanced: Creating Custom Templates
+
+### Key Concepts
+- **Scaffolding:** Setting up the project structure before writing any features
+- **Opinionated defaults:** Why having sensible defaults helps beginners move faster
+- **`.cursorrules`:** How to tune AI behavior for your specific project
+
+---
+
+## G27 — How to Use the Prompt Library
+
+**Audience:** All learners  
+**Summary:** How to search, copy, use, and contribute prompts in the Vibe Coding Prompt Library.
+
+### Table of Contents
+1. What Is the Prompt Library?
+2. How to Search and Filter
+3. Understanding the Prompt Format
+4. Replacing Variables in Prompts
+5. Adapting Prompts for Your Context
+6. Saving Your Favorite Prompts
+7. Contributing a New Prompt
+8. The Prompt Contribution Review Process
+
+### Key Concepts
+- **Prompt variables:** `{{VARIABLE_NAME}}` placeholders you replace with your own content
+- **Category taxonomy:** How prompts are organized for fast browsing
+- **Contribution flow:** How community-submitted prompts are reviewed and merged
+
+---
+
+## G28 — AI Tool Comparison: Choosing Your Stack
+
+**Audience:** All learners  
+**Summary:** How to evaluate and choose the right AI tools for your project — with honest comparisons from real-world vibe coding use.
+
+### Table of Contents
+1. Why Tool Choice Matters (and Why It Doesn't)
+2. The Four Tool Categories: Editor, Model, UI Generator, Deploy
+3. Cursor vs. Windsurf vs. Copilot
+4. Claude vs. ChatGPT vs. Gemini
+5. v0 vs. Bolt.new vs. Building from Scratch
+6. Vercel vs. GitHub Pages vs. Netlify
+7. The Recommended Workshop Stack
+8. The Free-Tier Stack
+9. When to Switch Tools
+10. How to Evaluate New AI Tools as They Launch
+
+### Key Concepts
+- **Tool categories:** Why each role in the stack is distinct
+- **Lock-in vs. flexibility:** When to commit to a tool and when to keep options open
+- **The evaluation framework:** Five questions to ask about any new AI dev tool
+
+---
+
+## G29 — Hosting a Regional Vibe Coding Workshop
+
+**Audience:** Instructors  
+**Summary:** A complete guide for certified regional instructors running the workshop in their city.
+
+### Table of Contents
+1. Getting Certified: The Regional Instructor Path
+2. Finding and Booking a Venue
+3. Setting Up Registration and Marketing Locally
+4. Pre-Workshop Logistics
+5. Adapting Examples for Your Local Context
+6. Day-Of Facilitation Tips
+7. Managing the Room: Energy, Pace, Breakdowns
+8. Post-Workshop Follow-Up
+9. Building a Local Alumni Community
+10. Reporting and Quality Standards
+
+### Key Concepts
+- **Local context:** How to make the workshop feel relevant to your city
+- **Facilitation energy:** The difference between lecture and accompaniment
+- **Alumni activation:** Turning one-day participants into an ongoing community
+
+---
+
+## G30 — The Vibe Code Jam: Participant Guide
+
+**Audience:** Community  
+**Summary:** Everything you need to know to participate in — and win — the annual Vibe Code Jam.
+
+### Table of Contents
+1. What Is the Code Jam?
+2. How to Register
+3. Choosing a Track (Solo, Team, First Timer, Remix)
+4. The Theme Reveal: How to Interpret It
+5. Building in 24 Hours: Time Management Tips
+6. Getting Help: Discord Channels and Support
+7. Submitting Your Project
+8. The Showcase and Judging Process
+9. After the Jam: Keep the Momentum
+
+### Key Concepts
+- **The 80% rule:** Ship something that works 80% of the way vs. perfecting 20% of a feature
+- **Scope discipline:** How to pick an idea you can actually ship in 24 hours
+- **Rubber duck prompting:** When you're stuck at 2 AM and no one's in the Discord
 
 ---
 

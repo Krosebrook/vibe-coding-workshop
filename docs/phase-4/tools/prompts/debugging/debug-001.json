@@ -1,0 +1,33 @@
+{
+  "id": "debug-001",
+  "title": "Error-First Debugging",
+  "description": "Give AI an error message and the code that caused it to get a plain-English explanation and a specific fix.",
+  "prompt": "I got this error:\n\n```\n{{ERROR_MESSAGE}}\n```\n\nHere is the code that caused it:\n\n```{{LANGUAGE}}\n{{CODE_BLOCK}}\n```\n\nExplain what caused this error in plain English. Then give me the corrected code with a comment explaining exactly what you changed and why.",
+  "variables": [
+    {
+      "name": "ERROR_MESSAGE",
+      "description": "Paste the exact error message from your browser console or terminal",
+      "example": "TypeError: Cannot read properties of undefined (reading 'map')"
+    },
+    {
+      "name": "LANGUAGE",
+      "description": "The programming language (js, html, css, python, etc.)",
+      "example": "js"
+    },
+    {
+      "name": "CODE_BLOCK",
+      "description": "Paste the code that produced the error",
+      "example": "const items = data.results.map(item => item.name);"
+    }
+  ],
+  "tags": ["debugging", "error-handling", "beginner", "console"],
+  "category": "debugging",
+  "aiTools": ["claude", "cursor", "chatgpt", "gemini"],
+  "skillLevel": "beginner",
+  "workshopProject": ["01", "02", "03", "04"],
+  "exampleOutput": "The error 'TypeError: Cannot read properties of undefined (reading map)' means you are trying to call .map() on a value that is undefined — meaning the variable doesn't exist yet when your code runs. This usually happens when data hasn't loaded yet from an API...",
+  "author": "Krosebrook",
+  "version": "1.0.0",
+  "createdAt": "2026-03-01",
+  "updatedAt": "2026-03-01"
+}

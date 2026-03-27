@@ -105,6 +105,17 @@
 - Add favicon
 - HTML validation CI step
 
+**Phase 4 (Product Ecosystem, 2027+) — Documentation Complete:**
+- Vibe Starter CLI scaffolding tool — spec at `docs/phase-4/tools/vibe-starter.md`
+- Prompt Library web app — spec at `docs/phase-4/tools/prompt-library.md`
+- AI Tool Comparison Guide — initial guide at `docs/phase-4/tools/ai-tool-comparison.md`
+- Vibe Code Jam operations — `docs/phase-4/community/code-jam.md`
+- Regional workshop framework — `docs/phase-4/community/regional-workshops.md`
+- University partnerships — `docs/phase-4/community/university-partnerships.md`
+- Sponsorship packages — `docs/phase-4/revenue/sponsorship-packages.md`
+- Curriculum licensing — `docs/phase-4/revenue/curriculum-licensing.md`
+- Book outline — `docs/phase-4/revenue/book-outline.md`
+
 ---
 
 ## 🚫 What NOT to Change Without Asking
@@ -141,6 +152,7 @@ Example phrases that fit the brand:
 | Date | Changes Made | AI |
 |------|--------------|----|
 | March 2026 | Initial documentation suite created | GitHub Copilot |
+| March 2026 | Phase 4 product ecosystem documentation built out | GitHub Copilot |
 
 ---
 

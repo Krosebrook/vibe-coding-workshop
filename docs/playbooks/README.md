@@ -16,6 +16,10 @@
 | [PB06 — New Cohort Launch Playbook](#pb06---new-cohort-launch-playbook) | Launch a new workshop cohort |
 | [PB07 — Participant Onboarding Playbook](#pb07---participant-onboarding-playbook) | Prepare participants for the day |
 | [PB08 — Post-Workshop Follow-Up Playbook](#pb08---post-workshop-follow-up-playbook) | Follow up after a workshop |
+| [PB09 — Code Jam Operations Playbook](#pb09---code-jam-operations-playbook) | Run the annual Vibe Code Jam |
+| [PB10 — Sponsorship Outreach Playbook](#pb10---sponsorship-outreach-playbook) | Prospect and close sponsors |
+| [PB11 — Curriculum Licensing Playbook](#pb11---curriculum-licensing-playbook) | Onboard a new curriculum licensee |
+| [PB12 — Regional Instructor Certification Playbook](#pb12---regional-instructor-certification-playbook) | Certify a new regional instructor |
 
 ---
 
@@ -400,6 +404,247 @@ Contents:
 - Prompt to share what they've built
 - Preview of next cohort (if they have friends to refer)
 - "What's your next project?"
+
+---
+
+*For questions about these playbooks, contact [hello@vibecodingworkshop.com](mailto:hello@vibecodingworkshop.com)*
+
+---
+
+## PB09 — Code Jam Operations Playbook
+
+### Overview
+How to plan, run, and follow up on the annual Vibe Code Jam build event.
+
+### 8 Weeks Before
+
+- [ ] Confirm event date and announce via newsletter + Discord
+- [ ] Open registration (free, via Typeform or custom form)
+- [ ] Recruit 3–5 judges (alumni, sponsor reps, or community members)
+- [ ] Reserve streaming platform (YouTube Live or Twitch)
+- [ ] Set up Discord channels: `#code-jam`, `#help-im-stuck`, `#find-a-team`
+- [ ] Draft kick-off livestream script
+
+### 4 Weeks Before
+
+- [ ] Send reminder to registered participants
+- [ ] Confirm all judges and send scoring rubric
+- [ ] Test streaming and submission form setup
+- [ ] Brief sponsors (if Code Jam has a title sponsor)
+- [ ] Prepare mid-point check-in script
+
+### 1 Week Before
+
+- [ ] Send logistics email: Discord link, schedule, theme hint ("something unexpected is coming")
+- [ ] Prepare theme reveal (keep secret until kick-off)
+- [ ] Confirm support volunteers for Discord during the event
+- [ ] Test submission form end-to-end
+
+### Day Before
+
+- [ ] Final streaming setup test
+- [ ] Set up all Discord channels and pin rules
+- [ ] Prepare kick-off presentation
+
+### Event Day (Friday)
+
+- [ ] Go live at 8:00 PM ET
+- [ ] Announce theme
+- [ ] Open Discord support channels
+- [ ] Monitor `#help-im-stuck` every 2 hours
+
+### Event Day (Saturday)
+
+- [ ] Mid-point check-in stream at 8:00 AM ET
+- [ ] Circulate Discord to keep energy up
+- [ ] Send 1-hour warning at 7:00 PM ET
+- [ ] Close submissions at 8:00 PM ET
+- [ ] Showcase stream at 9:00 PM ET
+- [ ] Announce winners at end of showcase
+
+### Post-Event
+
+- [ ] Email all participants: project gallery link, winner announcements
+- [ ] Publish project gallery on website
+- [ ] Write retrospective blog post
+- [ ] Update Code Jam documentation with lessons learned
+- [ ] Log participant count, submission count, countries in event record
+
+---
+
+## PB10 — Sponsorship Outreach Playbook
+
+### Overview
+How to prospect, pitch, and close sponsorship deals for AI/dev tool companies.
+
+### Identifying Prospects
+
+Target companies that:
+- Make AI development tools (editors, models, assistants)
+- Deploy or host web apps
+- Sell to non-technical developers or early-stage founders
+
+**Sources:**
+- ProductHunt launches in the AI/dev tools category
+- Y Combinator portfolio (AI + dev tools companies)
+- Existing tools used in the workshop (Anthropic, Cursor, Vercel, StackBlitz)
+
+### Outreach Template
+
+**Subject:** Sponsorship opportunity — Vibe Coding Workshop (Chicago, non-technical AI builder audience)
+
+**Body:**
+```
+Hi [Name],
+
+I run the Vibe Coding Workshop — a one-day workshop that teaches non-technical 
+people to build real apps using AI tools. We've had [N] participants go from 
+zero coding experience to deployed apps in one day using [THEIR TOOL / similar tools].
+
+We're opening sponsorship for our [upcoming cohort / 2027 season]. 
+Our participants are exactly the audience you want: non-technical people who 
+are forming opinions on AI dev tools for the first time.
+
+We have three tiers starting at $500/cohort. Can I send you our sponsorship deck?
+
+— Kyle
+hello@vibecodingworkshop.com
+```
+
+### Follow-Up Cadence
+
+| Day | Action |
+|-----|--------|
+| 0 | Send outreach email |
+| 5 | Follow up if no reply: one sentence, same thread |
+| 12 | Final follow up: "Happy to put you on the next cohort's list when ready" |
+| 30+ | Move to next cohort outreach cycle |
+
+### Closing Process
+
+1. Send sponsorship deck PDF (based on `docs/phase-4/revenue/sponsorship-packages.md`)
+2. Schedule 20-minute call to walk through benefits
+3. Agree on tier and cohort
+4. Send Sponsorship Agreement (PDF or DocuSign)
+5. Receive payment before cohort date
+6. Brief sponsor on workshop day logistics
+7. Deliver benefits during/after cohort
+8. Send post-cohort report
+
+### CRM Tracking
+
+Log each prospect in sponsor tracking sheet with:
+- Company name, contact, tier of interest
+- Status: `prospecting → outreach → call → agreement → paid → delivered → complete`
+- Last contact date and next action
+
+---
+
+## PB11 — Curriculum Licensing Playbook
+
+### Overview
+How to bring a new organization on board as a curriculum licensee.
+
+### Intake
+
+1. Receive inquiry via email
+2. Log in licensee tracking sheet
+3. Send 30-minute discovery call invite within 3 business days
+
+### Discovery Call Agenda
+
+- Who they are and what they run
+- Their intended use (cohort size, frequency, audience)
+- Their instructor situation (do they have someone?)
+- Their technology setup (can students use Cursor/Claude?)
+- Walk through licensing tiers
+- Answer questions
+
+### Post-Call
+
+- If good fit: Send licensing proposal within 48 hours
+- If not a fit: Send a friendly "not the right time" email with door left open
+
+### Proposal Contents
+
+1. Recommended tier and annual fee
+2. What's included (curriculum package + support)
+3. Quality standards summary
+4. License term (12 months, auto-renewal)
+5. Process for getting started
+
+### Onboarding (After Agreement Signed)
+
+- [ ] Collect signed Curriculum License Agreement
+- [ ] Collect payment
+- [ ] Share Instructor Resource Kit (Google Drive folder)
+- [ ] Schedule 60-minute onboarding call
+- [ ] Add organization to Slack `#licensees` channel
+- [ ] Schedule 4-hour instructor training session
+- [ ] Add to `/partners` page on website
+- [ ] Set 30-day check-in reminder
+
+### Ongoing Support
+
+| Cadence | Action |
+|---------|--------|
+| 30 days after first cohort | Check-in call: how did it go? |
+| Quarterly | Brief async update: NPS, cohort count |
+| Annually | Renewal review + curriculum update briefing |
+
+---
+
+## PB12 — Regional Instructor Certification Playbook
+
+### Overview
+How to evaluate, train, and certify a new regional instructor.
+
+### Application Review
+
+Minimum criteria:
+- [ ] Completed the Vibe Coding Workshop (workshop alumni)
+- [ ] Can commit to at least 2 cohorts per year
+- [ ] Has a venue or plan for a venue in their city
+- [ ] Has some teaching, mentoring, or facilitation experience
+
+### Step 1: Application Call (30 min)
+
+Review:
+- Background and motivation
+- City and target audience
+- Prior teaching experience
+- Technology comfort level
+
+If approved: move to preparation phase.
+
+### Step 2: Preparation Phase (4–6 weeks)
+
+- [ ] Send Instructor Resource Kit
+- [ ] Assign Guidebook G22 (Instructor Guide) + G29 (Regional Workshop Guide)
+- [ ] Schedule shadow day (attend a Grayslake workshop or virtual equivalent)
+- [ ] Candidate runs 1 pilot workshop (5–8 people, informal)
+- [ ] Candidate submits: written reflection + a 10-min video recording of one session
+
+### Step 3: Certification Review
+
+- [ ] Review pilot workshop feedback survey results
+- [ ] Review video recording
+- [ ] 30-minute certification call with Kyle
+- [ ] Checklist review: can they run the workshop independently?
+
+### Step 4: Certification
+
+- [ ] Send Certification Letter
+- [ ] Sign Regional Instructor Agreement
+- [ ] Add to instructor community Slack channel
+- [ ] Add to `/instructors` page on website
+- [ ] Add to instructor tracking sheet (city, status, cohorts delivered)
+
+### Ongoing Quality
+
+- Annual recertification call (30 minutes)
+- NPS monitoring — below 50 triggers a check-in
+- Curriculum update notifications via GitHub
 
 ---
 

@@ -1,0 +1,43 @@
+{
+  "id": "ui-001",
+  "title": "Hero Section Generator",
+  "description": "Generate a complete hero section for a landing page with headline, subtext, and a call-to-action button.",
+  "prompt": "Add a hero section to my HTML page with:\n- A large headline: \"{{HEADLINE}}\"\n- A subheading: \"{{SUBHEADING}}\"\n- A call-to-action button labeled \"{{CTA_TEXT}}\" that links to \"{{CTA_LINK}}\"\n- A badge/pill label above the headline that says \"{{BADGE_TEXT}}\"\n\nStyle requirements:\n- Use the existing CSS custom properties (--accent, --bg, --text, etc.) if they exist\n- Centered layout, generous padding (at least 5rem top/bottom)\n- The headline should be large (clamp between 2.4rem and 3.6rem)\n- Dark background preferred\n- Responsive on mobile\n\nOutput only the HTML and any new CSS needed. Do not change anything else on the page.",
+  "variables": [
+    {
+      "name": "HEADLINE",
+      "description": "Your main headline — the first thing people read",
+      "example": "Build apps by feel."
+    },
+    {
+      "name": "SUBHEADING",
+      "description": "Supporting text below the headline",
+      "example": "A one-day workshop where you go from idea to working application using AI as your co-pilot."
+    },
+    {
+      "name": "CTA_TEXT",
+      "description": "The text on the primary action button",
+      "example": "Join the Waitlist →"
+    },
+    {
+      "name": "CTA_LINK",
+      "description": "Where the button links to",
+      "example": "#waitlist"
+    },
+    {
+      "name": "BADGE_TEXT",
+      "description": "Short label in a pill badge above the headline",
+      "example": "Hands-on Workshop"
+    }
+  ],
+  "tags": ["ui-generation", "hero", "landing-page", "beginner"],
+  "category": "ui-generation",
+  "aiTools": ["claude", "cursor", "chatgpt"],
+  "skillLevel": "beginner",
+  "workshopProject": ["01"],
+  "exampleOutput": "<!-- HERO -->\n<div class=\"hero\">...</div>",
+  "author": "Krosebrook",
+  "version": "1.0.0",
+  "createdAt": "2026-03-01",
+  "updatedAt": "2026-03-01"
+}
