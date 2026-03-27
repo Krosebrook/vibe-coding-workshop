@@ -53,9 +53,14 @@ vibe-coding-workshop/
     ├── schemas/                # Data schemas & contracts
     ├── personas/               # 100 learner persona portfolios
     ├── templates/              # 50 project starter templates
-    ├── guidebooks/             # 25 in-depth guidebooks
+    ├── guidebooks/             # 25+ in-depth guidebooks
     ├── playbooks/              # Operational playbooks
-    └── presentations/          # Workshop slide decks
+    ├── presentations/          # Workshop slide decks
+    └── phase-4/                # Phase 4 product ecosystem docs
+        ├── README.md           # Phase 4 overview
+        ├── tools/              # Vibe Starter, Prompt Library, AI Tool Comparison
+        ├── community/          # Code Jam, Regional Workshops, University Partnerships
+        └── revenue/            # Sponsorship, Curriculum Licensing, Book
 ```
 
 ---

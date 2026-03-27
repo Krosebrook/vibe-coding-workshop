@@ -1,0 +1,23 @@
+{
+  "id": "CATEGORY-NNN",
+  "title": "Short Human-Readable Title",
+  "description": "One to two sentence description of what this prompt does and when to use it.",
+  "prompt": "Your prompt body here. Use {{VARIABLE_NAME}} for any values the user needs to replace.\n\nExample:\nI am building {{PROJECT_DESCRIPTION}}. Help me {{TASK}}.\n\nConstraints:\n- {{CONSTRAINT_1}}\n- No external libraries.",
+  "variables": [
+    {
+      "name": "VARIABLE_NAME",
+      "description": "Describe what the user should put here",
+      "example": "An example value"
+    }
+  ],
+  "tags": ["tag-one", "tag-two"],
+  "category": "scaffolding",
+  "aiTools": ["claude", "cursor"],
+  "skillLevel": "beginner",
+  "workshopProject": ["01"],
+  "exampleOutput": "Optional: paste a sample of good AI output here to set expectations",
+  "author": "your-github-username",
+  "version": "1.0.0",
+  "createdAt": "YYYY-MM-DD",
+  "updatedAt": "YYYY-MM-DD"
+}

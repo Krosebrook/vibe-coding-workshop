@@ -118,19 +118,19 @@
 ## Phase 4 — Product Ecosystem (2027+)
 
 ### Tools
-- [ ] "Vibe Starter" — an opinionated project scaffolding tool
-- [ ] Prompt library web app (searchable, tagged)
-- [ ] AI tool comparison guide (updated monthly)
+- [x] "Vibe Starter" — an opinionated project scaffolding tool (spec complete → [docs](docs/phase-4/tools/vibe-starter.md))
+- [x] Prompt library web app (spec complete → [docs](docs/phase-4/tools/prompt-library.md))
+- [x] AI tool comparison guide (initial guide published → [docs](docs/phase-4/tools/ai-tool-comparison.md))
 
 ### Community
-- [ ] Annual "Vibe Code Jam" — 24-hour community build event
-- [ ] Regional workshops (other cities)
-- [ ] University partnership program
+- [x] Annual "Vibe Code Jam" — 24-hour community build event (operations doc complete → [docs](docs/phase-4/community/code-jam.md))
+- [x] Regional workshops (framework and instructor certification program → [docs](docs/phase-4/community/regional-workshops.md))
+- [x] University partnership program (tiers, targets, and process → [docs](docs/phase-4/community/university-partnerships.md))
 
 ### Revenue Diversification
-- [ ] Sponsorship packages for AI/dev tool companies
-- [ ] Licensing workshop curriculum to coding bootcamps
-- [ ] Book: "Vibe Coding: Build Anything with AI"
+- [x] Sponsorship packages for AI/dev tool companies (tiers and policies → [docs](docs/phase-4/revenue/sponsorship-packages.md))
+- [x] Licensing workshop curriculum to coding bootcamps (tiers and process → [docs](docs/phase-4/revenue/curriculum-licensing.md))
+- [x] Book: "Vibe Coding: Build Anything with AI" (chapter outline and publishing plan → [docs](docs/phase-4/revenue/book-outline.md))
 
 ---
 

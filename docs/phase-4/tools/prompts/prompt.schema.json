@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PromptLibraryEntry",
+  "description": "Schema for a single prompt in the Vibe Coding Prompt Library. See docs/phase-4/tools/prompt-library.md for full documentation.",
+  "type": "object",
+  "required": ["id", "title", "description", "prompt", "tags", "category", "aiTools", "skillLevel"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]+-[0-9]{3}$",
+      "description": "Unique prompt ID in format category-NNN (e.g., 'debug-001')"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "prompt": {
+      "type": "string",
+      "description": "Use {{VARIABLE_NAME}} for replaceable variables"
+    },
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "example": { "type": "string" }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "debugging",
+        "scaffolding",
+        "ui-generation",
+        "api-integration",
+        "accessibility",
+        "seo",
+        "deployment",
+        "refactoring",
+        "documentation",
+        "prompting",
+        "security",
+        "performance"
+      ]
+    },
+    "aiTools": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["claude", "cursor", "chatgpt", "gemini", "copilot", "windsurf", "v0", "all"]
+      },
+      "minItems": 1
+    },
+    "skillLevel": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"]
+    },
+    "workshopProject": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["01", "02", "03", "04"]
+      }
+    },
+    "exampleOutput": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "additionalProperties": false
+}
