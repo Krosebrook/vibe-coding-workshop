@@ -16,6 +16,10 @@
 | [PB06 — New Cohort Launch Playbook](#pb06---new-cohort-launch-playbook) | Launch a new workshop cohort |
 | [PB07 — Participant Onboarding Playbook](#pb07---participant-onboarding-playbook) | Prepare participants for the day |
 | [PB08 — Post-Workshop Follow-Up Playbook](#pb08---post-workshop-follow-up-playbook) | Follow up after a workshop |
+| [PB09 — Virtual Workshop Delivery](#pb09---virtual-workshop-delivery) | Run a live remote/virtual cohort |
+| [PB10 — Corporate Training Delivery](#pb10---corporate-training-delivery) | Deliver a corporate team engagement |
+| [PB11 — Guest Instructor Onboarding](#pb11---guest-instructor-onboarding) | Onboard and prepare a guest instructor |
+| [PB12 — Referral & Affiliate Operations](#pb12---referral--affiliate-operations) | Manage referrals, commissions, and partner payouts |
 
 ---
 
@@ -400,6 +404,238 @@ Contents:
 - Prompt to share what they've built
 - Preview of next cohort (if they have friends to refer)
 - "What's your next project?"
+
+---
+
+---
+
+## PB09 — Virtual Workshop Delivery
+
+### Overview
+Everything needed to run a virtual (remote) Vibe Coding Workshop cohort — from pre-event setup through the live day and follow-up.
+
+For the full guide, see [docs/phase3/virtual-workshop-format.md](../phase3/virtual-workshop-format.md).
+
+---
+
+### Pre-Event Checklist (2 Weeks Before)
+
+- [ ] Create Zoom meeting with waiting room enabled
+- [ ] Set up breakout rooms (4–5 rooms of 5–6 participants each)
+- [ ] Create Discord workshop-day channel
+- [ ] Send participant onboarding email (accounts, tech setup, "what to expect")
+- [ ] Record 5-min "how today works" video for late joiners
+- [ ] Schedule optional 15-min tech check call for the week before
+
+### Pre-Event Checklist (1 Week Before)
+
+- [ ] Host tech check Zoom call
+  - Test participant screen share
+  - Verify Cursor + Claude accounts work
+  - Check audio/camera for each participant
+- [ ] Confirm all participant accounts are ready (GitHub, Cursor, Claude, Vercel)
+- [ ] Assign TAs to specific breakout rooms
+
+### Day Before
+
+- [ ] Send final email: Zoom link, Discord link, tool checklist, "have your app idea ready"
+- [ ] Test Zoom meeting and breakout room config
+- [ ] Verify Discord channel is live and accessible
+
+---
+
+### Day-Of Runsheet
+
+| Time (ET) | Segment | Notes |
+|-----------|---------|-------|
+| 8:30 AM | Open Zoom, admit TAs | Sound check, slide ready |
+| 9:00 AM | Open waiting room | Admit participants, lo-fi music |
+| 9:00–9:30 | Welcome + Intros | Screen share workshop slide deck |
+| 9:30–10:30 | Phase 1: Learn the Scales | Full group, instructor screen share |
+| 10:30–11:30 | Project 01 breakouts | Breakout rooms, TA-led |
+| 11:30–12:30 | Project 02 breakouts | Breakout rooms, TA-led |
+| 12:30–1:15 | Lunch (Zoom open) | Pin "Back at 1:15" in chat |
+| 1:15–2:30 | Project 03 (API) | Full group intro, then breakouts |
+| 2:30–4:00 | Project 04 (AI Chat) | Extended breakouts |
+| 4:00–4:30 | Ship It Ceremony | Full group, paste URLs in Discord |
+| 4:30–5:00 | Closing | Feedback form, resources, celebration |
+
+---
+
+### Post-Event Checklist
+
+- [ ] Send Zoom recording link to all participants (within 24 hours)
+- [ ] Archive Discord workshop-day channel
+- [ ] Run PB08 follow-up sequence
+- [ ] Log any tech or facilitation issues for next cohort
+
+---
+
+## PB10 — Corporate Training Delivery
+
+### Overview
+Step-by-step for delivering the Vibe Coding Workshop to a private corporate team. Covers pre-engagement, day-of, and follow-up.
+
+For the full guide, see [docs/phase3/corporate-training-guide.md](../phase3/corporate-training-guide.md).
+
+---
+
+### Pre-Engagement Checklist (6 Weeks Before)
+
+- [ ] Discovery call with team lead:
+  - Confirm format (in-person or virtual), date, headcount
+  - Collect 2–3 internal problem statements for customized prompts
+  - Identify IT contact for tool approval
+- [ ] Draft customized project prompts using their context
+- [ ] Send engagement letter / SOW
+- [ ] Receive 50% deposit
+
+### Pre-Engagement Checklist (4 Weeks Before)
+
+- [ ] Send participant pre-work email (accounts, setup, app idea prompt)
+- [ ] Confirm IT approval for Cursor and Claude
+- [ ] Finalize customized templates for 2 of the 4 projects
+
+### Pre-Engagement Checklist (2 Weeks Before)
+
+- [ ] Host optional participant tech check (virtual only)
+- [ ] Confirm headcount for catering (in-person)
+- [ ] Review customized prompts with team lead
+
+### 1 Week Before
+
+- [ ] Final logistics email to all participants
+- [ ] Confirm venue / Zoom setup
+
+---
+
+### Day-Of Adaptations
+
+**Welcome (Corporate Version):**
+> "Today you're not here to become a developer. You're here to understand what's possible — and to have proof that you can prototype ideas yourself."
+
+**Ship It (Corporate Version):**
+- Invite team lead to final 30 minutes
+- Have participants share live URLs in company Slack channel
+- Frame: "This is what your team can now prototype in a day."
+
+---
+
+### Post-Engagement Checklist
+
+- [ ] Send recap email with all live URLs (same day)
+- [ ] Send recording if virtual (within 24 hours)
+- [ ] Send feedback form (NPS + qualitative)
+- [ ] Process remaining 50% payment
+- [ ] Schedule 1-week check-in call
+
+---
+
+## PB11 — Guest Instructor Onboarding
+
+### Overview
+How to recruit, vet, prepare, and run a workshop day with a guest instructor.
+
+For the full guide, see [docs/phase3/guest-instructor-program.md](../phase3/guest-instructor-program.md).
+
+---
+
+### Recruitment Checklist
+
+- [ ] Identify 3–5 candidates (alumni, network, creator outreach)
+- [ ] Send outreach email using the template in the guest instructor guide
+- [ ] Schedule initial 20-min call
+
+### Selection Checklist
+
+- [ ] Initial call completed
+- [ ] Trial demo completed (15 min, informal)
+- [ ] Decision communicated within 48 hours
+- [ ] Offer sent (verbal → written agreement)
+
+### Onboarding Checklist (4 Weeks Before)
+
+- [ ] Instructor agreement signed
+- [ ] Full curriculum package shared (playbooks, guidebooks, templates, presentations)
+- [ ] Prep call scheduled
+
+### Onboarding Checklist (2 Weeks Before)
+
+- [ ] Prep call completed (60 min):
+  - Full day schedule reviewed together
+  - Segments ownership clarified
+  - Participant personas reviewed
+  - Incident scenarios discussed
+- [ ] GitHub read access granted
+- [ ] Added to workshop Discord
+
+### Day-Of
+
+- [ ] Arrive/join together (30 min before participants)
+- [ ] Quick huddle: energy, contingencies, hand-off signals
+
+### Post-Engagement
+
+- [ ] Debrief call (30 min) within 3 days
+- [ ] Compensation processed within 7 days
+- [ ] Added to guest instructor roster in [guest-instructor-program.md](../phase3/guest-instructor-program.md)
+
+---
+
+## PB12 — Referral & Affiliate Operations
+
+### Overview
+How to manage the referral program for alumni and the affiliate program for partners — tracking, payouts, and communication.
+
+For full specs, see [referral-program.md](../phase3/referral-program.md) and [affiliate-partnership-program.md](../phase3/affiliate-partnership-program.md).
+
+---
+
+### Monthly Referral Payout Process
+
+1. Pull referral report from portal admin or Rewardful dashboard
+2. Filter for status = `attended` and `rewardPaidAt` = null
+3. Process payouts via Venmo/PayPal
+4. Update referral records: status → `rewarded`, `rewardPaidAt` = today
+5. Send payout confirmation email to each alumni
+
+**Email template:**
+```
+Subject: Your referral reward is on its way 🎉
+
+Hi [Name],
+
+[Referred person's first name] attended the workshop — your $25 referral 
+reward has been sent to [Venmo/PayPal handle].
+
+Thanks for spreading the word. You're helping more people ship.
+
+Kyle
+```
+
+---
+
+### New Affiliate Partner Onboarding
+
+- [ ] Review application (audience fit, authentic content, FTC compliance capability)
+- [ ] Decision within 5 business days
+- [ ] If approved:
+  - [ ] Sign affiliate agreement
+  - [ ] Create affiliate code in Rewardful (or custom system)
+  - [ ] Send welcome email with promotional assets kit
+  - [ ] Add to monthly affiliate newsletter list
+- [ ] If declined: send polite decline with reasoning
+
+---
+
+### Monthly Affiliate Operations
+
+- [ ] Review Rewardful dashboard: new referrals, pending commissions
+- [ ] Process monthly payouts (for affiliates with > $50 in earned commission)
+- [ ] Send affiliate newsletter:
+  - Upcoming cohort dates
+  - Any new promotional assets
+  - Top performer shoutout (optional, with permission)
 
 ---
 

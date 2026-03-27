@@ -128,6 +128,20 @@
 - Add favicon
 - HTML validation CI step
 
+**Phase 3 (Scale, Fall 2026 – Spring 2027):**
+- Virtual workshop format — see `docs/phase3/virtual-workshop-format.md`
+- Second in-person cohort (30 seats)
+- Multi-day intensive (2-day) — see `docs/phase3/multi-day-intensive.md`
+- Corporate training — see `docs/phase3/corporate-training-guide.md`
+- Self-paced course — see `docs/phase3/self-paced-course-outline.md`
+- Participant portal — see `docs/phase3/participant-portal-spec.md`
+- Payment & registration — see `docs/phase3/payment-registration-spec.md`
+- Referral program — see `docs/phase3/referral-program.md`
+- Affiliate/partner program — see `docs/phase3/affiliate-partnership-program.md`
+- Vibe Coding 2.0 advanced workshop — see `docs/phase3/vibe-coding-2-curriculum.md`
+- Guest instructor program — see `docs/phase3/guest-instructor-program.md`
+- Project showcase gallery — see `docs/phase3/project-showcase-gallery.md`
+
 ---
 
 ## 🚫 What NOT to Change Without Asking
