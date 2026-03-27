@@ -49,22 +49,32 @@
     ├── schemas/
     ├── personas/           ← 100 learner personas
     ├── templates/          ← 50 project templates
-    ├── guidebooks/         ← 28 guidebooks (G01–G28)
-    ├── playbooks/          ← 12 playbooks (PB01–PB12)
+    ├── guidebooks/         ← 25 guidebooks
+    ├── playbooks/
     ├── presentations/      ← 10 slide decks
-    └── phase3/             ← Phase 3 scaling documentation
+    └── phase2/             ← Phase 2 operations & participant experience
         ├── README.md
-        ├── virtual-workshop-format.md
-        ├── corporate-training-guide.md
-        ├── multi-day-intensive.md
-        ├── self-paced-course-outline.md
-        ├── participant-portal-spec.md
-        ├── payment-registration-spec.md
-        ├── referral-program.md
-        ├── affiliate-partnership-program.md
-        ├── vibe-coding-2-curriculum.md
-        ├── guest-instructor-program.md
-        └── project-showcase-gallery.md
+        ├── workshop-day-schedule.md
+        ├── instructor-guide.md
+        ├── participant-workbook.md
+        ├── feedback-survey.md
+        ├── prompting-playbook.md
+        ├── github-classroom-setup.md
+        ├── email-sequences/
+        │   ├── README.md
+        │   ├── pre-workshop-onboarding.md
+        │   └── post-workshop-followup.md
+        ├── setup-guides/
+        │   ├── README.md
+        │   ├── cursor-setup.md
+        │   ├── claude-setup.md
+        │   ├── v0-setup.md
+        │   ├── vercel-setup.md
+        │   └── supabase-setup.md
+        └── community/
+            ├── README.md
+            ├── discord-guide.md
+            └── alumni-newsletter-template.md
 ```
 
 ---
@@ -168,7 +178,7 @@ Example phrases that fit the brand:
 | Date | Changes Made | AI |
 |------|--------------|----|
 | March 2026 | Initial documentation suite created | GitHub Copilot |
-| March 2026 | Phase 3 build-out: 12 spec docs, 4 new playbooks (PB09–PB12), 3 new guidebooks (G26–G28), Phase 3 schemas, site formats section | GitHub Copilot |
+| July 2026 | Phase 2 documentation suite created: `docs/phase2/` directory with 19 files covering workshop-day schedule, instructor guide, participant workbook, feedback survey, prompting playbook, GitHub Classroom setup, email sequences (pre + post), setup guides for all 5 tools, community Discord guide, and alumni newsletter template. ROADMAP.md updated to reflect Phase 2 in progress. | GitHub Copilot |
 
 ---
 

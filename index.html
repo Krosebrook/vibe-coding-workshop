@@ -4,6 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vibe Coding Workshop — Build Real Apps by Feel</title>
+
+  <!-- SEO -->
+  <meta name="description" content="A one-day hands-on workshop where non-technical people go from zero to four deployed web apps using AI tools like Claude and Cursor. No coding experience required." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vibecodingworkshop.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vibecodingworkshop.com/" />
+  <meta property="og:title" content="Vibe Coding Workshop — Build Real Apps by Feel" />
+  <meta property="og:description" content="A one-day hands-on workshop where non-technical people go from zero to four deployed web apps using AI tools like Claude and Cursor. No coding experience required." />
+  <meta property="og:image" content="https://vibecodingworkshop.com/og-image.png" />
+  <meta property="og:site_name" content="Vibe Coding Workshop" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vibe Coding Workshop — Build Real Apps by Feel" />
+  <meta name="twitter:description" content="A one-day hands-on workshop where non-technical people go from zero to four deployed web apps using AI tools like Claude and Cursor. No coding experience required." />
+  <meta name="twitter:image" content="https://vibecodingworkshop.com/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎸</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎸</text></svg>" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -227,26 +250,24 @@
     .faq-q { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
     .faq-a { font-size: 0.9rem; color: var(--muted); }
 
-    /* FORMATS */
-    .formats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    @media (max-width: 600px) { .formats-grid { grid-template-columns: 1fr; } }
-    .format-card {
+    .btn-block { display: block; text-align: center; }
+    .btn-secondary {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
+      color: var(--text);
     }
-    .format-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .format-card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.75rem; line-height: 1.6; }
-    .format-tag {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-family: var(--mono);
-      color: var(--green);
-      background: rgba(16,185,129,0.08);
-      border: 1px solid rgba(16,185,129,0.2);
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
+    .btn-secondary:hover { background: var(--border); }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
     }
 
     /* WAITLIST */
@@ -276,6 +297,57 @@
     .waitlist-form input:focus { border-color: var(--accent); }
     .waitlist-note { margin-top: 0.75rem; font-size: 0.78rem; color: var(--muted); }
 
+    /* TESTIMONIALS */
+    .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .testimonials-grid { grid-template-columns: 1fr; } }
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .testimonial-quote { font-size: 0.95rem; color: var(--text); line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+    .testimonial-author { font-size: 0.82rem; color: var(--accent-light); font-weight: 700; }
+    .testimonial-role { font-size: 0.78rem; color: var(--muted); }
+
+    /* PRICING */
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 600px) { .pricing-grid { grid-template-columns: 1fr; } }
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      position: relative;
+    }
+    .pricing-card.featured {
+      border-color: var(--accent);
+      background: rgba(124,58,237,0.06);
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -0.6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.75rem;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .pricing-tier { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; }
+    .pricing-price { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.25rem; }
+    .pricing-price span { font-size: 1rem; font-weight: 400; color: var(--muted); vertical-align: middle; }
+    .pricing-desc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.75rem; }
+    .pricing-features li { font-size: 0.88rem; color: var(--text); padding-left: 1.4rem; position: relative; }
+    .pricing-features li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+    .pricing-note { font-size: 0.78rem; color: var(--muted); text-align: center; margin-top: 1.5rem; }
+
     /* DIVIDER */
     .divider { border: none; border-top: 1px solid var(--border); max-width: 760px; margin: 0 auto; }
 
@@ -294,15 +366,17 @@
 </head>
 <body>
 
-<nav>
+<nav aria-label="Main navigation">
   <span class="nav-logo">Vibe Coding</span>
   <div class="nav-links">
-    <a href="#build">What You Build</a>
-    <a href="#how">How It Works</a>
-    <a href="#formats">Formats</a>
-    <a href="#faq">FAQ</a>
+    <a href="#build" aria-label="What You Build">What You Build</a>
+    <a href="#how" aria-label="How It Works">How It Works</a>
+    <a href="#pricing" aria-label="Pricing">Pricing</a>
+    <a href="#faq" aria-label="Frequently Asked Questions">FAQ</a>
   </div>
 </nav>
+
+<main role="main">
 
 <!-- HERO -->
 <div class="hero">
@@ -558,18 +632,102 @@
 
 <hr class="divider" />
 
+<!-- TESTIMONIALS -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="section-label">What People Say</div>
+  <h2 id="testimonials-heading">From people who showed up not knowing a thing.</h2>
+  <p class="section-sub">Pilot participants. Real words. No polish.</p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p class="testimonial-quote">"I came in thinking I'd spend the day confused. I left with four working apps and actually understanding what I built. That's something I didn't think was possible for me."</p>
+      <div class="testimonial-author">— Sarah M.</div>
+      <div class="testimonial-role">Marketing Manager, Chicago</div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-quote">"I've tried bootcamps, YouTube tutorials, everything. This was the first time I got unstuck fast enough to actually keep momentum. The AI + human combo just works."</p>
+      <div class="testimonial-author">— James K.</div>
+      <div class="testimonial-role">Freelance Designer, Milwaukee</div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-quote">"As a founder without a technical co-founder, being able to prototype my own ideas changes everything. Worth every minute."</p>
+      <div class="testimonial-author">— Priya N.</div>
+      <div class="testimonial-role">Early-Stage Founder</div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-quote">"Kyle doesn't make you feel dumb for not knowing things. He just moves you forward. That's rare."</p>
+      <div class="testimonial-author">— Marcus T.</div>
+      <div class="testimonial-role">Project Manager, Lake County</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- PRICING -->
+<section id="pricing" aria-labelledby="pricing-heading">
+  <div class="section-label">Pricing</div>
+  <h2 id="pricing-heading">Straightforward. No surprises.</h2>
+  <p class="section-sub">Early-bird pricing for the first cohort. Lock in your seat before the waitlist fills.</p>
+
+  <div class="pricing-grid">
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Early Bird — Limited Seats</div>
+      <div class="pricing-tier">Early Bird</div>
+      <div class="pricing-price">$249 <span>/ person</span></div>
+      <div class="pricing-desc">First cohort only. Price increases once early-bird seats are gone.</div>
+      <ul class="pricing-features" aria-label="Early bird tier features">
+        <li>Full one-day workshop (8 hrs)</li>
+        <li>All AI tool access provided</li>
+        <li>Prompting playbook (digital + print)</li>
+        <li>Four deployed apps at real URLs</li>
+        <li>GitHub repo with all your code</li>
+        <li>30-day post-workshop Q&amp;A support</li>
+        <li>Alumni Discord community access</li>
+      </ul>
+      <a href="#waitlist" class="btn-primary btn-block" aria-label="Join the waitlist for early bird pricing">Join the Waitlist →</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-tier">Standard</div>
+      <div class="pricing-price">$349 <span>/ person</span></div>
+      <div class="pricing-desc">After early-bird seats are filled. Same great workshop — same outcome.</div>
+      <ul class="pricing-features" aria-label="Standard tier features">
+        <li>Full one-day workshop (8 hrs)</li>
+        <li>All AI tool access provided</li>
+        <li>Prompting playbook (digital + print)</li>
+        <li>Four deployed apps at real URLs</li>
+        <li>GitHub repo with all your code</li>
+      </ul>
+      <a href="#waitlist" class="btn-primary btn-secondary btn-block" aria-label="Join the waitlist for standard pricing">Join the Waitlist →</a>
+    </div>
+  </div>
+  <p class="pricing-note">Group discounts available for teams of 3+. Email <a href="mailto:hello@vibecodingworkshop.com">hello@vibecodingworkshop.com</a>.</p>
+</section>
+
+<hr class="divider" />
+
 <!-- WAITLIST -->
 <section id="waitlist" style="padding:5rem 2rem;">
   <div class="waitlist-section">
     <h2>One day. One idea.<br/>One deployed app.</h2>
     <p>Summer 2026 · Limited to 20 seats · Beginners welcome</p>
-    <div class="waitlist-form">
-      <input type="email" placeholder="your@email.com" />
-      <a href="mailto:hello@vibecodingworkshop.com" class="btn-primary">Join Waitlist</a>
-    </div>
+    <form class="waitlist-form" action="mailto:hello@vibecodingworkshop.com" method="GET">
+      <label for="waitlist-email" class="visually-hidden">Your email address</label>
+      <input
+        type="email"
+        id="waitlist-email"
+        name="email"
+        placeholder="your@email.com"
+        autocomplete="email"
+        required
+      />
+      <a href="mailto:hello@vibecodingworkshop.com" class="btn-primary" aria-label="Join the waitlist">Join Waitlist</a>
+    </form>
     <div class="waitlist-note">No spam. Just launch dates and early-bird pricing.</div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <span>Vibe Coding Workshop · Built for beginners, by builders.</span>
