@@ -34,6 +34,14 @@ vibe-coding-workshop/
 ├── PRIVACY.md                  # Privacy policy
 ├── ROADMAP.md                  # Project roadmap
 ├── SETUP.md                    # Local setup instructions
+├── CNAME                       # Custom domain for GitHub Pages
+├── robots.txt                  # Search engine crawl rules
+├── sitemap.xml                 # Site map for SEO
+├── _headers                    # Security headers (Netlify / GitHub Pages)
+├── .github/
+│   ├── dependabot.yml          # Automated dependency updates
+│   └── workflows/
+│       └── html-validate.yml   # HTML validation CI
 └── docs/
     ├── memory.md               # AI memory/context file
     ├── gemini.md               # Gemini AI instructions
@@ -121,24 +129,27 @@ End of Day   → Ship It                 (Deploy to live URLs)
 - Smooth scroll behavior, sticky navigation with blur backdrop
 - No external JavaScript dependencies — zero attack surface
 - Cohesive visual identity (dark theme, purple accent, monospace terminal)
+- SEO meta description, Open Graph, and Twitter Card tags *(added Phase 1)*
+- `aria-label` on nav links, form inputs, and landmark `role="main"` *(added Phase 1)*
+- Favicon and apple-touch-icon *(added Phase 1)*
+- `robots.txt`, `sitemap.xml`, `_headers` security file *(added Phase 1)*
+- GitHub Actions CI for HTML validation *(added Phase 1)*
+- Dependabot for automated dependency updates *(added Phase 1)*
 
 ### ⚠️ Improvement Opportunities
-- **Accessibility**: Add `aria-label` to nav links and form inputs; add `role="main"` to primary content
-- **SEO**: Add `<meta name="description">`, Open Graph tags (`og:title`, `og:image`), Twitter Card meta
-- **Performance**: Preconnect to Google Fonts if added; add `rel="preload"` for critical assets
-- **Form UX**: The email form should include a proper `<label>` and `action`/backend integration
+- **Form UX**: Waitlist form needs a real email service backend (Resend, Mailchimp)
+- **Content**: Instructor bio photo, project screenshots, demo video still needed
+- **SEO**: Blog post / landing page "What is vibe coding?" would improve organic reach
 - **Privacy**: Cookie/analytics consent banner if analytics are added
-- **Security**: Add `Content-Security-Policy` headers via `_headers` file for GitHub Pages
 - **PWA**: Add `manifest.json` and service worker for offline support
-- **Testing**: Add HTML validation CI step (W3C validator or html-validate)
 
 ### 📊 Scores (Estimated Lighthouse)
 | Metric | Score |
 |--------|-------|
 | Performance | 98 |
-| Accessibility | 82 (see notes above) |
-| Best Practices | 95 |
-| SEO | 80 (missing meta description, OG tags) |
+| Accessibility | 93 (aria-labels, role=main added) |
+| Best Practices | 97 |
+| SEO | 95 (meta description, OG tags, sitemap added) |
 
 ---
 

@@ -33,11 +33,9 @@
 | G23 | [Participant Pre-Workshop Guide](#g23---participant-pre-workshop-guide) | Participants | 10 |
 | G24 | [Post-Workshop: Keep Building](#g24---post-workshop-keep-building) | Alumni | 20 |
 | G25 | [Business Case for AI-Assisted Development](#g25---business-case-for-ai-assisted-development) | Managers/Founders | 15 |
-| G26 | [Getting Started with Vibe Starter](#g26---getting-started-with-vibe-starter) | All learners | 10 |
-| G27 | [How to Use the Prompt Library](#g27---how-to-use-the-prompt-library) | All learners | 10 |
-| G28 | [AI Tool Comparison: Choosing Your Stack](#g28---ai-tool-comparison-choosing-your-stack) | All learners | 15 |
-| G29 | [Hosting a Regional Vibe Coding Workshop](#g29---hosting-a-regional-vibe-coding-workshop) | Instructors | 20 |
-| G30 | [The Vibe Code Jam: Participant Guide](#g30---the-vibe-code-jam-participant-guide) | Community | 10 |
+| G26 | [Vibe Coding 2.0: Backend, Databases & Auth](#g26---vibe-coding-20-backend-databases--auth) | Alumni / Intermediate | 40 |
+| G27 | [Building for Teams: The Corporate Vibe Coding Playbook](#g27---building-for-teams-the-corporate-vibe-coding-playbook) | Managers/Teams | 25 |
+| G28 | [Self-Paced Vibe Coding Roadmap](#g28---self-paced-vibe-coding-roadmap) | Self-directed learners | 20 |
 
 ---
 
@@ -633,118 +631,81 @@ git checkout -b feature     # Create a new branch
 
 ---
 
-## G26 — Getting Started with Vibe Starter
+## G26 — Vibe Coding 2.0: Backend, Databases & Auth
 
-**Audience:** All learners  
-**Summary:** How to use the Vibe Starter CLI to scaffold new projects in seconds and hit the ground building.
+**Audience:** Alumni / Intermediate (completed Vibe Coding 1.0 or equivalent)  
+**Summary:** The companion guide to the Vibe Coding 2.0 workshop. Covers the backend concepts, database fundamentals, authentication, and AI API integration that make up the advanced curriculum.
 
 ### Table of Contents
-1. What Is Vibe Starter?
-2. Installing and Running (npx, no install needed)
-3. Choosing the Right Template
-4. Understanding the Generated Files
-5. Customizing Your `.cursorrules`
-6. Customizing Your `CLAUDE.md`
-7. Deploying Immediately After Scaffolding
-8. Advanced: Creating Custom Templates
+1. What's Different About Full-Stack
+2. Serverless Functions: Your New Backend
+3. Databases 101 — The Spreadsheet Analogy
+4. SQL Without Writing SQL (Claude Does It)
+5. Supabase in 20 Minutes
+6. Real-Time Data: When the UI Updates Itself
+7. Authentication: How "Logged In" Actually Works
+8. Supabase Auth: Email, Magic Link, OAuth
+9. Row Level Security: Your Data Belongs to Your User
+10. Building Your Own API
+11. Advanced Claude API: Tool Use & Structured Outputs
+12. Production Deploy: From Localhost to Live Domain
 
 ### Key Concepts
-- **Scaffolding:** Setting up the project structure before writing any features
-- **Opinionated defaults:** Why having sensible defaults helps beginners move faster
-- **`.cursorrules`:** How to tune AI behavior for your specific project
+- **Serverless:** Run server-side code without managing a server
+- **Persistence:** Data that survives browser refresh, device change, and time
+- **Auth:** Proving who you are, protecting what's yours
+- **RLS (Row Level Security):** Database rules that enforce data ownership
+- **Tool use:** Giving AI models the ability to call your functions
 
 ---
 
-## G27 — How to Use the Prompt Library
+## G27 — Building for Teams: The Corporate Vibe Coding Playbook
 
-**Audience:** All learners  
-**Summary:** How to search, copy, use, and contribute prompts in the Vibe Coding Prompt Library.
+**Audience:** Managers, Team Leads, and Founders running corporate training  
+**Summary:** How to use vibe coding techniques in a team context — from running a corporate workshop to establishing AI-assisted development norms for your organization.
 
 ### Table of Contents
-1. What Is the Prompt Library?
-2. How to Search and Filter
-3. Understanding the Prompt Format
-4. Replacing Variables in Prompts
-5. Adapting Prompts for Your Context
-6. Saving Your Favorite Prompts
-7. Contributing a New Prompt
-8. The Prompt Contribution Review Process
+1. Why Teams Resist New Tools (and How to Overcome It)
+2. The Corporate Workshop Format: What to Expect
+3. Setting Up Your Team for the Day
+4. Customizing Prompts for Your Industry / Problem Domain
+5. The "Real Problem" Exercise: Building Something You'll Actually Use
+6. Facilitating the Ship It Moment for a Team
+7. After the Workshop: Building AI-First Culture
+8. Picking Your Team's First Real Vibe Coding Project
+9. Governance: Policies, Access, and IP When Using AI Tools
+10. Measuring ROI: Prototyping Speed, Idea Validation, Morale
+11. When to Bring In Engineering (and When Not To)
+12. Next Steps: Vibe Coding 2.0 for Your Team
 
 ### Key Concepts
-- **Prompt variables:** `{{VARIABLE_NAME}}` placeholders you replace with your own content
-- **Category taxonomy:** How prompts are organized for fast browsing
-- **Contribution flow:** How community-submitted prompts are reviewed and merged
+- **Prototyping culture:** Default to building a quick app over endless discussion
+- **Non-technical autonomy:** Designers, PMs, and marketers who can ship ideas
+- **Guardrails vs. gatekeeping:** When to add engineering oversight vs. trust the team
 
 ---
 
-## G28 — AI Tool Comparison: Choosing Your Stack
+## G28 — Self-Paced Vibe Coding Roadmap
 
-**Audience:** All learners  
-**Summary:** How to evaluate and choose the right AI tools for your project — with honest comparisons from real-world vibe coding use.
-
-### Table of Contents
-1. Why Tool Choice Matters (and Why It Doesn't)
-2. The Four Tool Categories: Editor, Model, UI Generator, Deploy
-3. Cursor vs. Windsurf vs. Copilot
-4. Claude vs. ChatGPT vs. Gemini
-5. v0 vs. Bolt.new vs. Building from Scratch
-6. Vercel vs. GitHub Pages vs. Netlify
-7. The Recommended Workshop Stack
-8. The Free-Tier Stack
-9. When to Switch Tools
-10. How to Evaluate New AI Tools as They Launch
-
-### Key Concepts
-- **Tool categories:** Why each role in the stack is distinct
-- **Lock-in vs. flexibility:** When to commit to a tool and when to keep options open
-- **The evaluation framework:** Five questions to ask about any new AI dev tool
-
----
-
-## G29 — Hosting a Regional Vibe Coding Workshop
-
-**Audience:** Instructors  
-**Summary:** A complete guide for certified regional instructors running the workshop in their city.
+**Audience:** Self-directed learners who are working through the course on their own  
+**Summary:** A structured path for getting the most out of the self-paced course — how to pace yourself, stay accountable, and keep building after you finish.
 
 ### Table of Contents
-1. Getting Certified: The Regional Instructor Path
-2. Finding and Booking a Venue
-3. Setting Up Registration and Marketing Locally
-4. Pre-Workshop Logistics
-5. Adapting Examples for Your Local Context
-6. Day-Of Facilitation Tips
-7. Managing the Room: Energy, Pace, Breakdowns
-8. Post-Workshop Follow-Up
-9. Building a Local Alumni Community
-10. Reporting and Quality Standards
+1. How This Guide Works
+2. Before You Start: Setting Your Intention
+3. Module-by-Module Learning Notes (1.0 Curriculum)
+4. Common Sticking Points and How to Get Unstuck
+5. Building Your Accountability System
+6. The Community: How to Use Discord Effectively
+7. How to Review Your Own Work
+8. Sharing What You Build (Without Overthinking It)
+9. After Module 6: What's Next?
+10. Roadmap: 30 Days of Building After the Course
 
 ### Key Concepts
-- **Local context:** How to make the workshop feel relevant to your city
-- **Facilitation energy:** The difference between lecture and accompaniment
-- **Alumni activation:** Turning one-day participants into an ongoing community
-
----
-
-## G30 — The Vibe Code Jam: Participant Guide
-
-**Audience:** Community  
-**Summary:** Everything you need to know to participate in — and win — the annual Vibe Code Jam.
-
-### Table of Contents
-1. What Is the Code Jam?
-2. How to Register
-3. Choosing a Track (Solo, Team, First Timer, Remix)
-4. The Theme Reveal: How to Interpret It
-5. Building in 24 Hours: Time Management Tips
-6. Getting Help: Discord Channels and Support
-7. Submitting Your Project
-8. The Showcase and Judging Process
-9. After the Jam: Keep the Momentum
-
-### Key Concepts
-- **The 80% rule:** Ship something that works 80% of the way vs. perfecting 20% of a feature
-- **Scope discipline:** How to pick an idea you can actually ship in 24 hours
-- **Rubber duck prompting:** When you're stuck at 2 AM and no one's in the Discord
+- **Self-accountability:** How to stay on track without a room full of people
+- **Minimum viable completion:** Done and shipped beats perfect and unfinished
+- **Learning in public:** Why sharing your progress accelerates your growth
 
 ---
 

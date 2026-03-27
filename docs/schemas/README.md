@@ -286,270 +286,157 @@
 
 ---
 
----
+## Phase 3 Schemas
 
-## Phase 4 Schemas
-
-### PromptLibraryEntry
-
-Used by the Prompt Library web app (`docs/phase-4/tools/prompt-library.md`).
+### WorkshopRegistration
 
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "PromptLibraryEntry",
-  "description": "A single prompt in the Vibe Coding Prompt Library",
+  "title": "WorkshopRegistration",
+  "description": "A completed workshop registration (post-payment via Stripe)",
   "type": "object",
-  "required": ["id", "title", "description", "prompt", "tags", "category", "aiTools", "skillLevel"],
+  "required": ["id", "email", "name", "cohortId", "format", "amountPaid", "registeredAt"],
   "properties": {
-    "id": {
+    "id": { "type": "string", "description": "UUID v4" },
+    "stripeSessionId": { "type": "string" },
+    "stripeCustomerId": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "name": { "type": "string" },
+    "cohortId": { "type": "string", "description": "e.g., 'fall-2026-virtual-01'" },
+    "format": {
       "type": "string",
-      "pattern": "^[a-z]+-[0-9]{3}$",
-      "description": "Unique prompt ID (e.g., 'debug-001')",
-      "example": "debug-001"
+      "enum": ["in-person", "virtual", "intensive", "self-paced", "corporate"]
     },
-    "title": {
+    "amountPaid": { "type": "number", "description": "Amount in USD" },
+    "promoCodeUsed": { "type": "string" },
+    "status": {
       "type": "string",
-      "maxLength": 80,
-      "description": "Short human-readable title"
+      "enum": ["confirmed", "refunded", "cancelled", "transferred"],
+      "default": "confirmed"
     },
-    "description": {
+    "registeredAt": { "type": "string", "format": "date-time" },
+    "background": {
       "type": "string",
-      "maxLength": 200,
-      "description": "One or two sentence description of what the prompt does"
+      "enum": ["designer", "marketer", "founder", "student", "career-change", "curious", "other"]
     },
-    "prompt": {
-      "type": "string",
-      "description": "The prompt body. Use {{VARIABLE_NAME}} for replaceable variables."
-    },
-    "variables": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["name", "description"],
-        "properties": {
-          "name": { "type": "string" },
-          "description": { "type": "string" },
-          "example": { "type": "string" }
-        }
-      },
-      "description": "Variables in the prompt that users replace"
-    },
-    "tags": {
-      "type": "array",
-      "items": { "type": "string" },
-      "minItems": 1,
-      "description": "Searchable tags"
-    },
-    "category": {
-      "type": "string",
-      "enum": [
-        "debugging", "scaffolding", "ui-generation", "api-integration",
-        "accessibility", "seo", "deployment", "refactoring",
-        "documentation", "prompting", "security", "performance"
-      ]
-    },
-    "aiTools": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": ["claude", "cursor", "chatgpt", "gemini", "copilot", "windsurf", "v0", "all"]
-      },
-      "description": "Which AI tools this prompt works well with"
-    },
-    "skillLevel": {
-      "type": "string",
-      "enum": ["beginner", "intermediate", "advanced"]
-    },
-    "workshopProject": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": ["01", "02", "03", "04"]
-      },
-      "description": "Which workshop projects this prompt applies to"
-    },
-    "exampleOutput": {
-      "type": "string",
-      "description": "Sample of what a good AI response looks like"
-    },
-    "author": {
-      "type": "string",
-      "description": "GitHub username or full name"
-    },
-    "version": {
-      "type": "string",
-      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
-      "description": "Semver version"
-    },
-    "createdAt": {
-      "type": "string",
-      "format": "date"
-    },
-    "updatedAt": {
-      "type": "string",
-      "format": "date"
-    }
+    "appIdea": { "type": "string" },
+    "portalAccessGranted": { "type": "boolean", "default": false }
   }
 }
 ```
 
-**Example:**
+---
+
+### ReferralCode
+
 ```json
 {
-  "id": "debug-001",
-  "title": "Error-First Debugging",
-  "description": "Give AI an error and your code to get a specific, actionable fix.",
-  "prompt": "I got this error:\n\n```\n{{ERROR_MESSAGE}}\n```\n\nHere is the code:\n\n```{{LANGUAGE}}\n{{CODE_BLOCK}}\n```\n\nExplain what caused this in plain English, then give me the corrected code.",
-  "variables": [
-    { "name": "ERROR_MESSAGE", "description": "Exact error message" },
-    { "name": "LANGUAGE", "description": "js, html, css, python, etc." },
-    { "name": "CODE_BLOCK", "description": "Code that produced the error" }
-  ],
-  "tags": ["debugging", "beginner", "error-handling"],
-  "category": "debugging",
-  "aiTools": ["claude", "cursor", "chatgpt"],
-  "skillLevel": "beginner",
-  "workshopProject": ["01", "02", "03", "04"],
-  "author": "Krosebrook",
-  "version": "1.0.0",
-  "createdAt": "2026-03-01",
-  "updatedAt": "2026-03-01"
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReferralCode",
+  "description": "A unique referral code belonging to an alumni participant",
+  "type": "object",
+  "required": ["id", "userId", "code", "createdAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "userId": { "type": "string", "description": "References profiles.id" },
+    "code": { "type": "string", "description": "Unique short code, e.g., 'marcusb'" },
+    "isActive": { "type": "boolean", "default": true },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
 }
 ```
 
 ---
 
-### SponsorPackage
-
-Used by the sponsorship management workflow (`docs/phase-4/revenue/sponsorship-packages.md`).
+### ReferralEvent
 
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "SponsorPackage",
-  "description": "A sponsorship agreement with an AI/dev tool company",
+  "title": "ReferralEvent",
+  "description": "A completed referral — someone registered using a referral link",
   "type": "object",
-  "required": ["id", "companyName", "tier", "cohort", "status", "agreedAt"],
+  "required": ["id", "referralCodeId", "referredEmail", "status", "createdAt"],
   "properties": {
     "id": { "type": "string" },
-    "companyName": { "type": "string" },
-    "contactEmail": { "type": "string", "format": "email" },
-    "tier": {
+    "referralCodeId": { "type": "string" },
+    "referredEmail": { "type": "string", "format": "email" },
+    "registrationId": { "type": "string" },
+    "status": {
       "type": "string",
-      "enum": ["bronze", "silver", "gold", "title"]
+      "enum": ["registered", "attended", "rewarded", "cancelled"]
     },
-    "cohort": {
+    "rewardType": { "type": "string", "enum": ["cash", "credit", "merch", "none"] },
+    "rewardAmount": { "type": "number" },
+    "rewardPaidAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}
+```
+
+---
+
+### AffiliatePartner
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AffiliatePartner",
+  "description": "An approved affiliate or partner in the affiliate program",
+  "type": "object",
+  "required": ["id", "name", "email", "type", "code", "commissionRate", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "type": {
       "type": "string",
-      "description": "Cohort ID or 'all-YYYY' for annual title sponsors"
+      "enum": ["content", "community", "corporate-referral", "institution"]
     },
-    "amount": {
+    "code": { "type": "string", "description": "Unique tracking code, e.g., 'techwithtimmy'" },
+    "commissionRate": {
       "type": "number",
-      "description": "Agreed sponsorship amount in USD"
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Decimal rate, e.g., 0.15 for 15%"
     },
-    "status": {
-      "type": "string",
-      "enum": ["prospecting", "negotiating", "agreed", "paid", "delivered", "complete", "declined"]
-    },
-    "benefits": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "List of agreed benefit deliverables"
-    },
-    "agreedAt": { "type": "string", "format": "date" },
-    "paymentReceivedAt": { "type": "string", "format": "date" },
-    "notes": { "type": "string" }
+    "status": { "type": "string", "enum": ["pending", "active", "paused", "terminated"] },
+    "payoutMethod": { "type": "string", "enum": ["paypal", "venmo", "bank-transfer", "credit"] },
+    "createdAt": { "type": "string", "format": "date-time" }
   }
 }
 ```
 
 ---
 
-### CurriculumLicensee
-
-Used to track organizations that have licensed the workshop curriculum (`docs/phase-4/revenue/curriculum-licensing.md`).
+### ShowcaseProject
 
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "CurriculumLicensee",
-  "description": "An organization licensed to teach the Vibe Coding Workshop curriculum",
+  "title": "ShowcaseProject",
+  "description": "A participant project approved for public showcase display",
   "type": "object",
-  "required": ["id", "organizationName", "contactEmail", "tier", "licenseStart", "status"],
+  "required": ["id", "participantId", "projectName", "liveUrl", "projectNumber", "cohortId", "consentGiven", "status"],
   "properties": {
     "id": { "type": "string" },
-    "organizationName": { "type": "string" },
-    "organizationType": {
-      "type": "string",
-      "enum": ["bootcamp", "community-college", "university", "corporate", "non-profit", "maker-space", "other"]
-    },
-    "contactEmail": { "type": "string", "format": "email" },
-    "city": { "type": "string" },
-    "country": { "type": "string" },
-    "tier": {
-      "type": "string",
-      "enum": ["starter", "growth", "enterprise", "non-profit"]
-    },
-    "annualFee": { "type": "number" },
-    "licenseStart": { "type": "string", "format": "date" },
-    "licenseEnd": { "type": "string", "format": "date" },
-    "status": {
-      "type": "string",
-      "enum": ["prospect", "pilot", "active", "expired", "terminated"]
-    },
-    "cohortsDelivered": { "type": "integer", "minimum": 0 },
-    "totalParticipants": { "type": "integer", "minimum": 0 },
-    "averageNps": { "type": "number", "minimum": -100, "maximum": 100 },
-    "notes": { "type": "string" }
-  }
-}
-```
-
----
-
-### CodeJamSubmission
-
-Used for the annual Vibe Code Jam event (`docs/phase-4/community/code-jam.md`).
-
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "CodeJamSubmission",
-  "description": "A project submission for the annual Vibe Code Jam",
-  "type": "object",
-  "required": ["id", "projectName", "liveUrl", "track", "submittedAt"],
-  "properties": {
-    "id": { "type": "string" },
-    "year": { "type": "integer" },
-    "projectName": { "type": "string", "maxLength": 80 },
-    "description": { "type": "string", "maxLength": 280 },
+    "participantId": { "type": "string" },
+    "projectNumber": { "type": "integer", "minimum": 1, "maximum": 4 },
+    "projectName": { "type": "string" },
     "liveUrl": { "type": "string", "format": "uri" },
+    "description": { "type": "string", "maxLength": 280 },
+    "screenshotUrl": { "type": "string", "format": "uri" },
+    "cohortId": { "type": "string" },
+    "displayName": { "type": "string", "description": "How participant wants credit displayed" },
     "githubUrl": { "type": "string", "format": "uri" },
-    "track": {
-      "type": "string",
-      "enum": ["solo", "team", "first-timer", "remix"]
-    },
-    "teamMembers": {
-      "type": "array",
-      "items": { "type": "string" },
-      "maxItems": 3
-    },
-    "aiToolsUsed": {
-      "type": "array",
-      "items": { "type": "string" }
-    },
-    "wouldYouUseThis": { "type": "boolean" },
-    "submittedAt": { "type": "string", "format": "date-time" },
-    "scores": {
-      "type": "object",
-      "properties": {
-        "ships": { "type": "number", "minimum": 0, "maximum": 5 },
-        "solvessomething": { "type": "number", "minimum": 0, "maximum": 5 },
-        "vibe": { "type": "number", "minimum": 0, "maximum": 5 },
-        "aiFirstApproach": { "type": "number", "minimum": 0, "maximum": 5 },
-        "accessible": { "type": "number", "minimum": 0, "maximum": 5 }
-      }
-    }
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "consentGiven": { "type": "boolean" },
+    "consentWithdrawnAt": { "type": "string", "format": "date-time" },
+    "isFeatured": { "type": "boolean", "default": false },
+    "status": { "type": "string", "enum": ["pending", "approved", "declined", "withdrawn"] },
+    "reviewedAt": { "type": "string", "format": "date-time" },
+    "submittedAt": { "type": "string", "format": "date-time" }
   }
 }
 ```
