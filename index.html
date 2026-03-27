@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vibe Coding Workshop — Build Real Apps by Feel</title>
+  <meta name="description" content="A one-day hands-on workshop where you go from idea to working application using AI as your co-pilot. No coding experience required. Ship four real apps in one day." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vibe Coding Workshop — Build Real Apps by Feel" />
+  <meta property="og:description" content="A one-day hands-on workshop where you go from idea to working application using AI as your co-pilot. No coding experience required." />
+  <meta property="og:url" content="https://krosebrook.github.io/vibe-coding-workshop" />
+  <meta property="og:site_name" content="Vibe Coding Workshop" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vibe Coding Workshop — Build Real Apps by Feel" />
+  <meta name="twitter:description" content="A one-day hands-on workshop where you go from idea to working application using AI as your co-pilot. No coding experience required." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -257,6 +268,19 @@
     /* DIVIDER */
     .divider { border: none; border-top: 1px solid var(--border); max-width: 760px; margin: 0 auto; }
 
+    /* VISUALLY HIDDEN (accessible labels) */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     /* FOOTER */
     footer {
       max-width: 760px;
@@ -272,7 +296,7 @@
 </head>
 <body>
 
-<nav>
+<nav aria-label="Main site navigation">
   <span class="nav-logo">Vibe Coding</span>
   <div class="nav-links">
     <a href="#build">What You Build</a>
@@ -280,6 +304,8 @@
     <a href="#faq">FAQ</a>
   </div>
 </nav>
+
+<main role="main">
 
 <!-- HERO -->
 <div class="hero">
@@ -439,7 +465,7 @@
 <hr class="divider" />
 
 <!-- WHAT TO BRING -->
-<section>
+<section id="bring">
   <div class="section-label">What to Bring</div>
   <h2>Almost nothing.</h2>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;">
@@ -507,12 +533,15 @@
     <h2>One day. One idea.<br/>One deployed app.</h2>
     <p>Summer 2026 · Limited to 20 seats · Beginners welcome</p>
     <div class="waitlist-form">
-      <input type="email" placeholder="your@email.com" />
+      <label for="waitlist-email" class="sr-only">Email address</label>
+      <input id="waitlist-email" type="email" placeholder="your@email.com" />
       <a href="mailto:hello@vibecodingworkshop.com" class="btn-primary">Join Waitlist</a>
     </div>
     <div class="waitlist-note">No spam. Just launch dates and early-bird pricing.</div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <span>Vibe Coding Workshop · Built for beginners, by builders.</span>

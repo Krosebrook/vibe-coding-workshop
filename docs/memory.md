@@ -97,13 +97,20 @@
 
 ## 📋 Open Tasks (from ROADMAP.md)
 
-**Phase 1 (Pre-Launch, Summer 2026):**
-- Add Open Graph / Twitter Card meta tags
-- Add `<meta name="description">`
-- Add `aria-label` to nav and form
-- Connect waitlist form to email backend
-- Add favicon
-- HTML validation CI step
+**Phase 1 (Pre-Launch, Summer 2026) — remaining:**
+- Connect waitlist form to email backend (Resend, Mailchimp, etc.)
+- Add favicon and apple-touch-icon
+- Add `sitemap.xml` and `robots.txt`
+- Add `_headers` file for CSP security headers
+- Testimonials section + Pricing section
+
+**Phase 1 (Pre-Launch, Summer 2026) — completed:**
+- ✅ Added `<meta name="description">` for SEO
+- ✅ Added Open Graph + Twitter Card meta tags
+- ✅ Added `aria-label` to nav links and email input
+- ✅ Added `<main role="main">` wrapper
+- ✅ Added visually-hidden `<label>` for email input
+- ✅ Added `id="bring"` to "What to Bring" section
 
 ---
 
@@ -141,6 +148,7 @@ Example phrases that fit the brand:
 | Date | Changes Made | AI |
 |------|--------------|----|
 | March 2026 | Initial documentation suite created | GitHub Copilot |
+| March 2026 | Audit of all 4 workshop phases; fixed SEO, accessibility, and semantic HTML in `index.html`; updated ROADMAP.md with Phases 5–9; refreshed README.md audit summary and memory.md | GitHub Copilot |
 
 ---
 

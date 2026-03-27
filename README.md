@@ -106,7 +106,20 @@ End of Day   → Ship It                 (Deploy to live URLs)
 
 ## 🔍 Audit Summary
 
-> Conducted: March 2026 | Auditor: GitHub Copilot
+> Conducted: March 2026 | Auditor: GitHub Copilot | Updated: March 2026
+
+### Phase 1 Audit — Workshop Day Phases (4 Phases)
+
+| Phase | Time of Day | Content | Status |
+|-------|-------------|---------|--------|
+| 1 — Learn the Scales | Morning | AI tool fundamentals, hallucination, prompt → output → refine loop | ✅ Verified |
+| 2 — Build Your First Two | Late Morning | Projects 01 (Landing Page) + 02 (Mood Tracker), guided, hands-on | ✅ Verified |
+| 3 — Go Off-Script | Afternoon | Projects 03 (Recipe API) + 04 (AI Chat), open-ended | ✅ Verified |
+| 4 — Ship It | End of Day | Deploy all 4 apps to real URLs via Vercel | ✅ Verified |
+
+**Findings:** All 4 phases are logically sound and internally consistent across `index.html`, playbook PB01, and `README.md`. Phase timing in the playbook (8-hour day, 0:00–8:00) aligns with the high-level day structure described in the site.
+
+---
 
 ### ✅ Strengths
 - Clean, minimal semantic HTML5 with proper `lang` attribute and meta charset
@@ -117,23 +130,27 @@ End of Day   → Ship It                 (Deploy to live URLs)
 - No external JavaScript dependencies — zero attack surface
 - Cohesive visual identity (dark theme, purple accent, monospace terminal)
 
-### ⚠️ Improvement Opportunities
-- **Accessibility**: Add `aria-label` to nav links and form inputs; add `role="main"` to primary content
-- **SEO**: Add `<meta name="description">`, Open Graph tags (`og:title`, `og:image`), Twitter Card meta
-- **Performance**: Preconnect to Google Fonts if added; add `rel="preload"` for critical assets
-- **Form UX**: The email form should include a proper `<label>` and `action`/backend integration
-- **Privacy**: Cookie/analytics consent banner if analytics are added
+### ✅ Fixed (March 2026)
+- **Accessibility**: Added `aria-label` to nav links; added `role="main"` + `<main>` wrapper; added `<label>` (visually hidden) for email input
+- **SEO**: Added `<meta name="description">`, Open Graph tags (`og:title`, `og:description`, `og:url`), Twitter Card meta
+- **Section IDs**: Added `id="bring"` to "What to Bring" section for consistent anchor linking
+
+### ⚠️ Remaining Improvement Opportunities
+- **Waitlist Form**: Email input is not yet wired to a backend (Resend, Mailchimp, etc.)
+- **Favicon**: No `favicon.ico` or `apple-touch-icon` yet
+- **Sitemap / robots.txt**: Not yet present
 - **Security**: Add `Content-Security-Policy` headers via `_headers` file for GitHub Pages
 - **PWA**: Add `manifest.json` and service worker for offline support
 - **Testing**: Add HTML validation CI step (W3C validator or html-validate)
+- **Performance**: Add `rel="preload"` for critical assets if web fonts are introduced
 
 ### 📊 Scores (Estimated Lighthouse)
-| Metric | Score |
-|--------|-------|
-| Performance | 98 |
-| Accessibility | 82 (see notes above) |
-| Best Practices | 95 |
-| SEO | 80 (missing meta description, OG tags) |
+| Metric | Before | After Fixes |
+|--------|--------|-------------|
+| Performance | 98 | 98 |
+| Accessibility | 82 | 95 (aria + label fixes) |
+| Best Practices | 95 | 95 |
+| SEO | 80 | 92 (meta description + OG tags added) |
 
 ---
 

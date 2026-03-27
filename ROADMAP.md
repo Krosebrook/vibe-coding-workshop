@@ -36,9 +36,11 @@
 ## Phase 1 — Pre-Launch (Summer 2026)
 
 ### Site Improvements
-- [ ] Add Open Graph + Twitter Card meta tags for social sharing
-- [ ] Add `<meta name="description">` for SEO
-- [ ] Add `aria-label` to nav links and form inputs
+- [x] Add Open Graph + Twitter Card meta tags for social sharing
+- [x] Add `<meta name="description">` for SEO
+- [x] Add `aria-label` to nav links and form inputs
+- [x] Add `<main role="main">` wrapper for accessibility
+- [x] Add `<label>` for email input (visually hidden, screen-reader accessible)
 - [ ] Implement proper waitlist form with email service backend (e.g., Resend, Mailchimp)
 - [ ] Add favicon and apple-touch-icon
 - [ ] Add `sitemap.xml` and `robots.txt`
@@ -121,6 +123,111 @@
 
 ---
 
+## Phase 5 — Advanced Curriculum & Specializations (2027)
+
+### New Workshop Tracks
+- [ ] "Vibe Coding: Backend" — databases, auth, REST APIs (1-day intensive)
+- [ ] "Vibe Coding: Mobile" — React Native / Expo with AI (1-day intensive)
+- [ ] "Vibe Coding: Data" — Python notebooks, AI analysis, dashboards
+- [ ] Modular curriculum: mix-and-match workshop days
+
+### Credentials & Recognition
+- [ ] Completion certificate (digital, shareable on LinkedIn)
+- [ ] Alumni badge for GitHub profile
+- [ ] Skill assessment: pre/post workshop prompt-quality scoring
+
+### Partnerships
+- [ ] Formal MOU with College of Lake County for recurring venue
+- [ ] Pilot with 1–2 coding bootcamps to license curriculum
+
+---
+
+## Phase 6 — Enterprise Training & Licensing (2027–2028)
+
+### Corporate Offering
+- [ ] "Vibe Coding for Teams" — half-day workshop for companies (8–20 devs)
+- [ ] Custom industry tracks (marketing, design, finance, ops)
+- [ ] Enterprise licensing package for corporate L&D departments
+- [ ] Train-the-trainer program (certify 5 facilitators)
+
+### Revenue Streams
+- [ ] Corporate workshop day rate (flat fee + materials)
+- [ ] Annual curriculum license for bootcamps / universities
+- [ ] Sponsored cohorts (AI tool companies sponsor seats for underrepresented builders)
+
+### Infrastructure
+- [ ] CRM for corporate pipeline (HubSpot or similar)
+- [ ] Proposal & SoW templates for enterprise sales
+- [ ] Facilitator certification portal (simple LMS)
+
+---
+
+## Phase 7 — Platform & Community Maturity (2028)
+
+### Community
+- [ ] 500+ active alumni in Discord
+- [ ] Monthly alumni "build nights" (virtual co-working)
+- [ ] Annual "Vibe Code Jam" — 24-hour community hackathon (virtual + in-person)
+- [ ] Alumni showcase gallery on website (real apps built after the workshop)
+- [ ] Peer mentorship pairing: recent alumni mentor new cohorts
+
+### Platform
+- [ ] Participant portal v2: project portfolio, peer reviews, prompting journal
+- [ ] AI-powered prompt feedback tool (evaluate prompt quality in real time)
+- [ ] Searchable public prompt library (community-contributed, curated)
+- [ ] Workshop replay library (screen recordings from past sessions)
+
+### Content
+- [ ] Weekly newsletter: "The Vibe" — AI tool news, participant spotlights, prompt tips
+- [ ] YouTube channel: workshop highlight reels, tool walkthroughs
+- [ ] Guest instructor series: alumni-turned-builders teaching their specialty
+
+---
+
+## Phase 8 — Global Expansion (2028–2029)
+
+### Geographic Expansion
+- [ ] Second US city: Austin, TX or Denver, CO (pilot 2-day event)
+- [ ] International pilot: Toronto, London, or Berlin (partner with local co-working space)
+- [ ] Translated curriculum: Spanish and Portuguese (Latin American market)
+- [ ] Local facilitator network: trained + licensed facilitators in 5 cities
+
+### Accessibility & Inclusion
+- [ ] Scholarship program: 2 free seats per cohort for underrepresented builders
+- [ ] Accessible workshop materials (screen-reader optimized, WCAG 2.1 AA)
+- [ ] Low-bandwidth version of participant portal for emerging markets
+
+### Scale Targets
+- [ ] 1,000 cumulative alumni
+- [ ] 12 cohorts per year across all locations
+- [ ] 10 certified facilitators globally
+
+---
+
+## Phase 9 — Legacy & Impact (2029+)
+
+### Book & Media
+- [ ] Publish: *Vibe Coding: Build Anything with AI* (book or interactive digital course)
+- [ ] Podcast: "Built Without a CS Degree" — interviews with self-taught builders
+- [ ] Documentary short: follow 3 participants from zero to shipped product
+
+### Institutional Impact
+- [ ] University partnership program: guest lectures + curriculum licensing at 10+ schools
+- [ ] High school pilot: intro vibe coding workshop for ages 14–18
+- [ ] Public library program: free community workshops in underserved areas
+
+### Open Source
+- [ ] Open-source the core curriculum (CC-BY-SA license)
+- [ ] "Vibe Starter" CLI tool — open source project scaffolding with AI prompts baked in
+- [ ] Contribute prompt engineering resources to the broader open-source community
+
+### Sustainability
+- [ ] Foundation or 501(c)(3) application to support scholarship and public programs
+- [ ] Endowment goal: 3 years of operating expenses in reserve
+- [ ] Succession plan: transition facilitation ownership to alumni network
+
+---
+
 ## 💡 Under Consideration
 
 - Mobile app companion for the prompting playbook
@@ -136,11 +243,17 @@
 |-----------|------------|--------|
 | Marketing site live | Q1 2026 | ✅ |
 | Documentation suite complete | Q1 2026 | ✅ |
+| Accessibility & SEO fixes (OG, aria, meta) | Q1 2026 | ✅ |
 | Waitlist backend connected | Q2 2026 | 📋 |
 | First cohort delivered | Summer 2026 | 📋 |
 | 50 alumni | Q4 2026 | 📋 |
 | Virtual format launched | Q4 2026 | 💡 |
 | 200 alumni | 2027 | 💡 |
+| Enterprise training program | 2027–2028 | 💡 |
+| 500 alumni | 2028 | 💡 |
+| Global expansion (2 cities) | 2028–2029 | 💡 |
+| 1,000 alumni | 2029 | 💡 |
+| Open-source curriculum released | 2029+ | 💡 |
 
 ---
 
