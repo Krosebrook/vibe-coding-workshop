@@ -51,7 +51,30 @@
     ├── templates/          ← 50 project templates
     ├── guidebooks/         ← 25 guidebooks
     ├── playbooks/
-    └── presentations/      ← 10 slide decks
+    ├── presentations/      ← 10 slide decks
+    └── phase2/             ← Phase 2 operations & participant experience
+        ├── README.md
+        ├── workshop-day-schedule.md
+        ├── instructor-guide.md
+        ├── participant-workbook.md
+        ├── feedback-survey.md
+        ├── prompting-playbook.md
+        ├── github-classroom-setup.md
+        ├── email-sequences/
+        │   ├── README.md
+        │   ├── pre-workshop-onboarding.md
+        │   └── post-workshop-followup.md
+        ├── setup-guides/
+        │   ├── README.md
+        │   ├── cursor-setup.md
+        │   ├── claude-setup.md
+        │   ├── v0-setup.md
+        │   ├── vercel-setup.md
+        │   └── supabase-setup.md
+        └── community/
+            ├── README.md
+            ├── discord-guide.md
+            └── alumni-newsletter-template.md
 ```
 
 ---
@@ -141,6 +164,7 @@ Example phrases that fit the brand:
 | Date | Changes Made | AI |
 |------|--------------|----|
 | March 2026 | Initial documentation suite created | GitHub Copilot |
+| July 2026 | Phase 2 documentation suite created: `docs/phase2/` directory with 19 files covering workshop-day schedule, instructor guide, participant workbook, feedback survey, prompting playbook, GitHub Classroom setup, email sequences (pre + post), setup guides for all 5 tools, community Discord guide, and alumni newsletter template. ROADMAP.md updated to reflect Phase 2 in progress. | GitHub Copilot |
 
 ---
 
