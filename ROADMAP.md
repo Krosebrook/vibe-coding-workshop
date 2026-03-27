@@ -36,15 +36,15 @@
 ## Phase 1 — Pre-Launch (Summer 2026)
 
 ### Site Improvements
-- [ ] Add Open Graph + Twitter Card meta tags for social sharing
-- [ ] Add `<meta name="description">` for SEO
-- [ ] Add `aria-label` to nav links and form inputs
+- [x] Add Open Graph + Twitter Card meta tags for social sharing
+- [x] Add `<meta name="description">` for SEO
+- [x] Add `aria-label` to nav links and form inputs
 - [ ] Implement proper waitlist form with email service backend (e.g., Resend, Mailchimp)
-- [ ] Add favicon and apple-touch-icon
-- [ ] Add `sitemap.xml` and `robots.txt`
-- [ ] Add `_headers` file for security headers (GitHub Pages / Netlify)
-- [ ] Testimonials section (from pilot participants)
-- [ ] Pricing section with early-bird offer
+- [x] Add favicon and apple-touch-icon
+- [x] Add `sitemap.xml` and `robots.txt`
+- [x] Add `_headers` file for security headers (GitHub Pages / Netlify)
+- [x] Testimonials section (from pilot participants)
+- [x] Pricing section with early-bird offer
 
 ### Content
 - [ ] Instructor bio photo
@@ -53,8 +53,8 @@
 - [ ] Blog post: "What is vibe coding?" (SEO landing page)
 
 ### Infrastructure
-- [ ] Set up GitHub Actions CI for HTML validation
-- [ ] Set up Dependabot for any future dependencies
+- [x] Set up GitHub Actions CI for HTML validation
+- [x] Set up Dependabot for any future dependencies
 - [ ] Configure GitHub Pages custom domain (`vibecodingworkshop.com`)
 
 ---
