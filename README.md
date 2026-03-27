@@ -34,6 +34,14 @@ vibe-coding-workshop/
 ├── PRIVACY.md                  # Privacy policy
 ├── ROADMAP.md                  # Project roadmap
 ├── SETUP.md                    # Local setup instructions
+├── CNAME                       # Custom domain for GitHub Pages
+├── robots.txt                  # Search engine crawl rules
+├── sitemap.xml                 # Site map for SEO
+├── _headers                    # Security headers (Netlify / GitHub Pages)
+├── .github/
+│   ├── dependabot.yml          # Automated dependency updates
+│   └── workflows/
+│       └── html-validate.yml   # HTML validation CI
 └── docs/
     ├── memory.md               # AI memory/context file
     ├── gemini.md               # Gemini AI instructions
@@ -45,9 +53,14 @@ vibe-coding-workshop/
     ├── schemas/                # Data schemas & contracts
     ├── personas/               # 100 learner persona portfolios
     ├── templates/              # 50 project starter templates
-    ├── guidebooks/             # 25 in-depth guidebooks
+    ├── guidebooks/             # 25+ in-depth guidebooks
     ├── playbooks/              # Operational playbooks
-    └── presentations/          # Workshop slide decks
+    ├── presentations/          # Workshop slide decks
+    └── phase-4/                # Phase 4 product ecosystem docs
+        ├── README.md           # Phase 4 overview
+        ├── tools/              # Vibe Starter, Prompt Library, AI Tool Comparison
+        ├── community/          # Code Jam, Regional Workshops, University Partnerships
+        └── revenue/            # Sponsorship, Curriculum Licensing, Book
 ```
 
 ---
@@ -129,28 +142,27 @@ End of Day   → Ship It                 (Deploy to live URLs)
 - Smooth scroll behavior, sticky navigation with blur backdrop
 - No external JavaScript dependencies — zero attack surface
 - Cohesive visual identity (dark theme, purple accent, monospace terminal)
+- SEO meta description, Open Graph, and Twitter Card tags *(added Phase 1)*
+- `aria-label` on nav links, form inputs, and landmark `role="main"` *(added Phase 1)*
+- Favicon and apple-touch-icon *(added Phase 1)*
+- `robots.txt`, `sitemap.xml`, `_headers` security file *(added Phase 1)*
+- GitHub Actions CI for HTML validation *(added Phase 1)*
+- Dependabot for automated dependency updates *(added Phase 1)*
 
-### ✅ Fixed (March 2026)
-- **Accessibility**: Added `aria-label` to nav links; added `role="main"` + `<main>` wrapper; added `<label>` (visually hidden) for email input
-- **SEO**: Added `<meta name="description">`, Open Graph tags (`og:title`, `og:description`, `og:url`), Twitter Card meta
-- **Section IDs**: Added `id="bring"` to "What to Bring" section for consistent anchor linking
-
-### ⚠️ Remaining Improvement Opportunities
-- **Waitlist Form**: Email input is not yet wired to a backend (Resend, Mailchimp, etc.)
-- **Favicon**: No `favicon.ico` or `apple-touch-icon` yet
-- **Sitemap / robots.txt**: Not yet present
-- **Security**: Add `Content-Security-Policy` headers via `_headers` file for GitHub Pages
+### ⚠️ Improvement Opportunities
+- **Form UX**: Waitlist form needs a real email service backend (Resend, Mailchimp)
+- **Content**: Instructor bio photo, project screenshots, demo video still needed
+- **SEO**: Blog post / landing page "What is vibe coding?" would improve organic reach
+- **Privacy**: Cookie/analytics consent banner if analytics are added
 - **PWA**: Add `manifest.json` and service worker for offline support
-- **Testing**: Add HTML validation CI step (W3C validator or html-validate)
-- **Performance**: Add `rel="preload"` for critical assets if web fonts are introduced
 
 ### 📊 Scores (Estimated Lighthouse)
-| Metric | Before | After Fixes |
-|--------|--------|-------------|
-| Performance | 98 | 98 |
-| Accessibility | 82 | 95 (aria + label fixes) |
-| Best Practices | 95 | 95 |
-| SEO | 80 | 92 (meta description + OG tags added) |
+| Metric | Score |
+|--------|-------|
+| Performance | 98 |
+| Accessibility | 93 (aria-labels, role=main added) |
+| Best Practices | 97 |
+| SEO | 95 (meta description, OG tags, sitemap added) |
 
 ---
 

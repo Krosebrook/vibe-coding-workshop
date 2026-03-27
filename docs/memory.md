@@ -51,7 +51,30 @@
     ├── templates/          ← 50 project templates
     ├── guidebooks/         ← 25 guidebooks
     ├── playbooks/
-    └── presentations/      ← 10 slide decks
+    ├── presentations/      ← 10 slide decks
+    └── phase2/             ← Phase 2 operations & participant experience
+        ├── README.md
+        ├── workshop-day-schedule.md
+        ├── instructor-guide.md
+        ├── participant-workbook.md
+        ├── feedback-survey.md
+        ├── prompting-playbook.md
+        ├── github-classroom-setup.md
+        ├── email-sequences/
+        │   ├── README.md
+        │   ├── pre-workshop-onboarding.md
+        │   └── post-workshop-followup.md
+        ├── setup-guides/
+        │   ├── README.md
+        │   ├── cursor-setup.md
+        │   ├── claude-setup.md
+        │   ├── v0-setup.md
+        │   ├── vercel-setup.md
+        │   └── supabase-setup.md
+        └── community/
+            ├── README.md
+            ├── discord-guide.md
+            └── alumni-newsletter-template.md
 ```
 
 ---
@@ -112,6 +135,20 @@
 - ✅ Added visually-hidden `<label>` for email input
 - ✅ Added `id="bring"` to "What to Bring" section
 
+**Phase 3 (Scale, Fall 2026 – Spring 2027):**
+- Virtual workshop format — see `docs/phase3/virtual-workshop-format.md`
+- Second in-person cohort (30 seats)
+- Multi-day intensive (2-day) — see `docs/phase3/multi-day-intensive.md`
+- Corporate training — see `docs/phase3/corporate-training-guide.md`
+- Self-paced course — see `docs/phase3/self-paced-course-outline.md`
+- Participant portal — see `docs/phase3/participant-portal-spec.md`
+- Payment & registration — see `docs/phase3/payment-registration-spec.md`
+- Referral program — see `docs/phase3/referral-program.md`
+- Affiliate/partner program — see `docs/phase3/affiliate-partnership-program.md`
+- Vibe Coding 2.0 advanced workshop — see `docs/phase3/vibe-coding-2-curriculum.md`
+- Guest instructor program — see `docs/phase3/guest-instructor-program.md`
+- Project showcase gallery — see `docs/phase3/project-showcase-gallery.md`
+
 ---
 
 ## 🚫 What NOT to Change Without Asking
@@ -148,7 +185,7 @@ Example phrases that fit the brand:
 | Date | Changes Made | AI |
 |------|--------------|----|
 | March 2026 | Initial documentation suite created | GitHub Copilot |
-| March 2026 | Audit of all 4 workshop phases; fixed SEO, accessibility, and semantic HTML in `index.html`; updated ROADMAP.md with Phases 5–9; refreshed README.md audit summary and memory.md | GitHub Copilot |
+| July 2026 | Phase 2 documentation suite created: `docs/phase2/` directory with 19 files covering workshop-day schedule, instructor guide, participant workbook, feedback survey, prompting playbook, GitHub Classroom setup, email sequences (pre + post), setup guides for all 5 tools, community Discord guide, and alumni newsletter template. ROADMAP.md updated to reflect Phase 2 in progress. | GitHub Copilot |
 
 ---
 

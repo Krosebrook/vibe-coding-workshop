@@ -286,4 +286,161 @@
 
 ---
 
+## Phase 3 Schemas
+
+### WorkshopRegistration
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WorkshopRegistration",
+  "description": "A completed workshop registration (post-payment via Stripe)",
+  "type": "object",
+  "required": ["id", "email", "name", "cohortId", "format", "amountPaid", "registeredAt"],
+  "properties": {
+    "id": { "type": "string", "description": "UUID v4" },
+    "stripeSessionId": { "type": "string" },
+    "stripeCustomerId": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "name": { "type": "string" },
+    "cohortId": { "type": "string", "description": "e.g., 'fall-2026-virtual-01'" },
+    "format": {
+      "type": "string",
+      "enum": ["in-person", "virtual", "intensive", "self-paced", "corporate"]
+    },
+    "amountPaid": { "type": "number", "description": "Amount in USD" },
+    "promoCodeUsed": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["confirmed", "refunded", "cancelled", "transferred"],
+      "default": "confirmed"
+    },
+    "registeredAt": { "type": "string", "format": "date-time" },
+    "background": {
+      "type": "string",
+      "enum": ["designer", "marketer", "founder", "student", "career-change", "curious", "other"]
+    },
+    "appIdea": { "type": "string" },
+    "portalAccessGranted": { "type": "boolean", "default": false }
+  }
+}
+```
+
+---
+
+### ReferralCode
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReferralCode",
+  "description": "A unique referral code belonging to an alumni participant",
+  "type": "object",
+  "required": ["id", "userId", "code", "createdAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "userId": { "type": "string", "description": "References profiles.id" },
+    "code": { "type": "string", "description": "Unique short code, e.g., 'marcusb'" },
+    "isActive": { "type": "boolean", "default": true },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}
+```
+
+---
+
+### ReferralEvent
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReferralEvent",
+  "description": "A completed referral — someone registered using a referral link",
+  "type": "object",
+  "required": ["id", "referralCodeId", "referredEmail", "status", "createdAt"],
+  "properties": {
+    "id": { "type": "string" },
+    "referralCodeId": { "type": "string" },
+    "referredEmail": { "type": "string", "format": "email" },
+    "registrationId": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["registered", "attended", "rewarded", "cancelled"]
+    },
+    "rewardType": { "type": "string", "enum": ["cash", "credit", "merch", "none"] },
+    "rewardAmount": { "type": "number" },
+    "rewardPaidAt": { "type": "string", "format": "date-time" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}
+```
+
+---
+
+### AffiliatePartner
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AffiliatePartner",
+  "description": "An approved affiliate or partner in the affiliate program",
+  "type": "object",
+  "required": ["id", "name", "email", "type", "code", "commissionRate", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "type": {
+      "type": "string",
+      "enum": ["content", "community", "corporate-referral", "institution"]
+    },
+    "code": { "type": "string", "description": "Unique tracking code, e.g., 'techwithtimmy'" },
+    "commissionRate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Decimal rate, e.g., 0.15 for 15%"
+    },
+    "status": { "type": "string", "enum": ["pending", "active", "paused", "terminated"] },
+    "payoutMethod": { "type": "string", "enum": ["paypal", "venmo", "bank-transfer", "credit"] },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}
+```
+
+---
+
+### ShowcaseProject
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ShowcaseProject",
+  "description": "A participant project approved for public showcase display",
+  "type": "object",
+  "required": ["id", "participantId", "projectName", "liveUrl", "projectNumber", "cohortId", "consentGiven", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "participantId": { "type": "string" },
+    "projectNumber": { "type": "integer", "minimum": 1, "maximum": 4 },
+    "projectName": { "type": "string" },
+    "liveUrl": { "type": "string", "format": "uri" },
+    "description": { "type": "string", "maxLength": 280 },
+    "screenshotUrl": { "type": "string", "format": "uri" },
+    "cohortId": { "type": "string" },
+    "displayName": { "type": "string", "description": "How participant wants credit displayed" },
+    "githubUrl": { "type": "string", "format": "uri" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "consentGiven": { "type": "boolean" },
+    "consentWithdrawnAt": { "type": "string", "format": "date-time" },
+    "isFeatured": { "type": "boolean", "default": false },
+    "status": { "type": "string", "enum": ["pending", "approved", "declined", "withdrawn"] },
+    "reviewedAt": { "type": "string", "format": "date-time" },
+    "submittedAt": { "type": "string", "format": "date-time" }
+  }
+}
+```
+
+---
+
 *These schemas serve as contracts between UI, backend, and AI tooling. Update when data structures change.*
