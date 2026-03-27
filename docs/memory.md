@@ -49,9 +49,22 @@
     ├── schemas/
     ├── personas/           ← 100 learner personas
     ├── templates/          ← 50 project templates
-    ├── guidebooks/         ← 25 guidebooks
-    ├── playbooks/
-    └── presentations/      ← 10 slide decks
+    ├── guidebooks/         ← 28 guidebooks (G01–G28)
+    ├── playbooks/          ← 12 playbooks (PB01–PB12)
+    ├── presentations/      ← 10 slide decks
+    └── phase3/             ← Phase 3 scaling documentation
+        ├── README.md
+        ├── virtual-workshop-format.md
+        ├── corporate-training-guide.md
+        ├── multi-day-intensive.md
+        ├── self-paced-course-outline.md
+        ├── participant-portal-spec.md
+        ├── payment-registration-spec.md
+        ├── referral-program.md
+        ├── affiliate-partnership-program.md
+        ├── vibe-coding-2-curriculum.md
+        ├── guest-instructor-program.md
+        └── project-showcase-gallery.md
 ```
 
 ---
@@ -105,6 +118,20 @@
 - Add favicon
 - HTML validation CI step
 
+**Phase 3 (Scale, Fall 2026 – Spring 2027):**
+- Virtual workshop format — see `docs/phase3/virtual-workshop-format.md`
+- Second in-person cohort (30 seats)
+- Multi-day intensive (2-day) — see `docs/phase3/multi-day-intensive.md`
+- Corporate training — see `docs/phase3/corporate-training-guide.md`
+- Self-paced course — see `docs/phase3/self-paced-course-outline.md`
+- Participant portal — see `docs/phase3/participant-portal-spec.md`
+- Payment & registration — see `docs/phase3/payment-registration-spec.md`
+- Referral program — see `docs/phase3/referral-program.md`
+- Affiliate/partner program — see `docs/phase3/affiliate-partnership-program.md`
+- Vibe Coding 2.0 advanced workshop — see `docs/phase3/vibe-coding-2-curriculum.md`
+- Guest instructor program — see `docs/phase3/guest-instructor-program.md`
+- Project showcase gallery — see `docs/phase3/project-showcase-gallery.md`
+
 ---
 
 ## 🚫 What NOT to Change Without Asking
@@ -141,6 +168,7 @@ Example phrases that fit the brand:
 | Date | Changes Made | AI |
 |------|--------------|----|
 | March 2026 | Initial documentation suite created | GitHub Copilot |
+| March 2026 | Phase 3 build-out: 12 spec docs, 4 new playbooks (PB09–PB12), 3 new guidebooks (G26–G28), Phase 3 schemas, site formats section | GitHub Copilot |
 
 ---
 

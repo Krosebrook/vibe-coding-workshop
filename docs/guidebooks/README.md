@@ -33,6 +33,9 @@
 | G23 | [Participant Pre-Workshop Guide](#g23---participant-pre-workshop-guide) | Participants | 10 |
 | G24 | [Post-Workshop: Keep Building](#g24---post-workshop-keep-building) | Alumni | 20 |
 | G25 | [Business Case for AI-Assisted Development](#g25---business-case-for-ai-assisted-development) | Managers/Founders | 15 |
+| G26 | [Vibe Coding 2.0: Backend, Databases & Auth](#g26---vibe-coding-20-backend-databases--auth) | Alumni / Intermediate | 40 |
+| G27 | [Building for Teams: The Corporate Vibe Coding Playbook](#g27---building-for-teams-the-corporate-vibe-coding-playbook) | Managers/Teams | 25 |
+| G28 | [Self-Paced Vibe Coding Roadmap](#g28---self-paced-vibe-coding-roadmap) | Self-directed learners | 20 |
 
 ---
 
@@ -625,6 +628,84 @@ git checkout -b feature     # Create a new branch
 8. Getting Stakeholder Buy-In
 9. Training Your Team
 10. Governance and Security Policies for AI Dev Tools
+
+---
+
+## G26 — Vibe Coding 2.0: Backend, Databases & Auth
+
+**Audience:** Alumni / Intermediate (completed Vibe Coding 1.0 or equivalent)  
+**Summary:** The companion guide to the Vibe Coding 2.0 workshop. Covers the backend concepts, database fundamentals, authentication, and AI API integration that make up the advanced curriculum.
+
+### Table of Contents
+1. What's Different About Full-Stack
+2. Serverless Functions: Your New Backend
+3. Databases 101 — The Spreadsheet Analogy
+4. SQL Without Writing SQL (Claude Does It)
+5. Supabase in 20 Minutes
+6. Real-Time Data: When the UI Updates Itself
+7. Authentication: How "Logged In" Actually Works
+8. Supabase Auth: Email, Magic Link, OAuth
+9. Row Level Security: Your Data Belongs to Your User
+10. Building Your Own API
+11. Advanced Claude API: Tool Use & Structured Outputs
+12. Production Deploy: From Localhost to Live Domain
+
+### Key Concepts
+- **Serverless:** Run server-side code without managing a server
+- **Persistence:** Data that survives browser refresh, device change, and time
+- **Auth:** Proving who you are, protecting what's yours
+- **RLS (Row Level Security):** Database rules that enforce data ownership
+- **Tool use:** Giving AI models the ability to call your functions
+
+---
+
+## G27 — Building for Teams: The Corporate Vibe Coding Playbook
+
+**Audience:** Managers, Team Leads, and Founders running corporate training  
+**Summary:** How to use vibe coding techniques in a team context — from running a corporate workshop to establishing AI-assisted development norms for your organization.
+
+### Table of Contents
+1. Why Teams Resist New Tools (and How to Overcome It)
+2. The Corporate Workshop Format: What to Expect
+3. Setting Up Your Team for the Day
+4. Customizing Prompts for Your Industry / Problem Domain
+5. The "Real Problem" Exercise: Building Something You'll Actually Use
+6. Facilitating the Ship It Moment for a Team
+7. After the Workshop: Building AI-First Culture
+8. Picking Your Team's First Real Vibe Coding Project
+9. Governance: Policies, Access, and IP When Using AI Tools
+10. Measuring ROI: Prototyping Speed, Idea Validation, Morale
+11. When to Bring In Engineering (and When Not To)
+12. Next Steps: Vibe Coding 2.0 for Your Team
+
+### Key Concepts
+- **Prototyping culture:** Default to building a quick app over endless discussion
+- **Non-technical autonomy:** Designers, PMs, and marketers who can ship ideas
+- **Guardrails vs. gatekeeping:** When to add engineering oversight vs. trust the team
+
+---
+
+## G28 — Self-Paced Vibe Coding Roadmap
+
+**Audience:** Self-directed learners who are working through the course on their own  
+**Summary:** A structured path for getting the most out of the self-paced course — how to pace yourself, stay accountable, and keep building after you finish.
+
+### Table of Contents
+1. How This Guide Works
+2. Before You Start: Setting Your Intention
+3. Module-by-Module Learning Notes (1.0 Curriculum)
+4. Common Sticking Points and How to Get Unstuck
+5. Building Your Accountability System
+6. The Community: How to Use Discord Effectively
+7. How to Review Your Own Work
+8. Sharing What You Build (Without Overthinking It)
+9. After Module 6: What's Next?
+10. Roadmap: 30 Days of Building After the Course
+
+### Key Concepts
+- **Self-accountability:** How to stay on track without a room full of people
+- **Minimum viable completion:** Done and shipped beats perfect and unfinished
+- **Learning in public:** Why sharing your progress accelerates your growth
 
 ---
 
