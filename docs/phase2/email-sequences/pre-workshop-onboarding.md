@@ -241,11 +241,11 @@ Kyle
 <div style="background:#0a0a0a;color:#e8e8e8;font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:40px 24px;">
 
   <p style="color:#a78bfa;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:24px;">
-    7 DAYS TO GO
+    FINAL SETUP CHECK
   </p>
 
   <h1 style="font-size:28px;font-weight:700;margin-bottom:32px;">
-    Final setup check
+    7 days to go
   </h1>
 
   <p style="line-height:1.7;margin-bottom:24px;">

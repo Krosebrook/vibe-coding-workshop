@@ -9,7 +9,7 @@
 | Time | Block | Duration |
 |------|-------|---------|
 | 7:00 AM | Instructor arrives / room setup | 60 min |
-| 8:00 AM | Doors open / informal arrivals | 30 min |
+| 8:00 AM | Doors Open / Informal Arrivals | 30 min |
 | 8:30 AM | Welcome + introductions | 30 min |
 | 9:00 AM | Phase 1: Learn the Scales | 90 min |
 | 10:30 AM | ☕ Break 1 | 15 min |

@@ -200,9 +200,9 @@ What would you use this for?
 
 ## Monthly Event Ideas
 
-| Month | Event |
-|-------|-------|
-| Month 1 (post-cohort) | Virtual Show & Tell — alumni demo their projects (30 min Zoom) |
+| Month (post-cohort) | Event |
+|---------------------|-------|
+| Month 1 | Virtual Show & Tell — alumni demo their projects (30 min Zoom) |
 | Month 2 | Prompt Workshop — 60 min live session on a specific technique |
 | Month 3 | Build Challenge — same prompt, everyone builds something different |
 | Month 4 | Alumni Interview — Kyle interviews one alumnus about what they built |

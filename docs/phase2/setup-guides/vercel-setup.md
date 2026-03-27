@@ -90,7 +90,7 @@ Your serverless function can now access the key with `process.env.ANTHROPIC_API_
 
 ## Step 5: Custom Domain Setup (Optional)
 
-If you want your project to live at your own domain (e.g., `alexchen.dev` instead of `project-01-alexchen.vercel.app`):
+If you want your project to live at your own domain (e.g., `yourname.dev` instead of `project-01-yourname.vercel.app`):
 
 1. Buy a domain at Namecheap, Google Domains, or Cloudflare Domains (~$10–15/year)
 2. In Vercel: Project → Settings → Domains → Add Domain
